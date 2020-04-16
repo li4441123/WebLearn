@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>比较运算符</title>
+    <script>
+        // 概念：比较运算符（关系运算符）是两个数据进行比较时所使用的运算符，比较运算后，会返回一个布尔值（true/false）作为比较运算的结果。
+
+        console.log(15 >= 12); //true
+        console.log(12 >= 15); //false
+        // 1、大于等于是>= , 小于等于是<=
+
+        console.log(3 == 5); //false
+        console.log('29' == 29); //true
+        console.log(29 == '29'); //true
+        console.log(29 != '29'); //false
+        // console.log('song' = 'song'); 不成立，必须是数字才行
+        //2、 程序里的 等于是 == ，不等于是!=, 默认转换数据类型，会把字符串转换为数字类型。只要值相同就返回true，不判断数据的类型。
+
+        console.log(18 === '18'); //false
+        console.log(18 === 18); //true
+        // 3、=== 三个等号是全等于，要求数值和类型，全部相同才返回true
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

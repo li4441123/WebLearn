@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>数组去重(重点案例)</title>
+    <script>
+        // 封装一个去重的函数:unique
+        function unique(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1) { //通过indexOf(数组元素)判断newArr数组是否有arr[i]这个元素,没有返回-1,条件达成.
+                    newArr.push(arr[i]); //把arr[i]存入newArr
+                }
+            }
+            return newArr;
+        }
+
+        var arr = ['a', 'b', 'a', 'c', 'd', 'b', 'e', 'c', 'f', 'a', 'd'];
+        console.log(unique(arr));
+
+
+        // 练习:
+        var na = [];
+
+        function qc(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (na.indexOf(arr[i]) === -1) {
+                    na.push(arr[i])
+                }
+            }
+            return na;
+        }
+
+        // var demo = qc(['blue', 'green', 'red', 'blue'])
+        var demo = qc(['blue', 'green', 'yellow', 'yellow'])
+        console.log(demo);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

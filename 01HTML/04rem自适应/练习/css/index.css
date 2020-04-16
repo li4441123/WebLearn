@@ -1,0 +1,81 @@
+@media screen and (min-width: 750px) {
+    /* 如果屏幕宽度超出750px,就给html设置字体75px，这样不管宽度超出多少，就默认为750px,750px以下，就会根据flexible库事实计算宽度。 */
+    html {
+        font-size: 75px !important;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*如果使用flexible库，必须给body设置一个宽度区间，一般是大于320px 到 小于设计稿得宽度 因为flexible库是自动计算屏幕宽度，
+不像手动写得common公共库里得内容，已经设置好类似阶梯得区间。*/
+body {
+    min-width: 320px;
+    max-width: 750px;
+    width: 10rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 1.12rem;
+    background-color: #ffc001;
+
+}
+
+header .left {
+    width: .586667rem;
+    height: .933333rem;
+    background: url(../images/classify.png) no-repeat;
+    background-size: .586667rem .933333rem;
+    margin: .146667rem .333333rem .093333rem .32rem;
+}
+
+header .center {
+    flex: 1;
+}
+
+header .center input {
+    outline: none;
+    border: 0;
+    width: 100%;
+    height: .88rem;
+    border-radius: .44rem;
+    margin-top: .133333rem;
+    padding-left: .733333rem;
+    font-size: .333333rem;
+    color: #757575;
+    background-color: #FFF2CC;
+}
+
+header .right {
+    width: 1rem;
+    height: .933333rem;
+    line-height: .933333rem;
+    margin: .133333rem;
+    text-align: center;
+    font-size: .333333rem;
+    color: #fff;
+}
+
+
+.banner {
+    width: 10rem;
+    height: 4.906667rem;
+}
+
+.banner img {
+    width: 10rem;
+    height: 4.906667rem;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>为什么使用函数</title>
+    <script>
+        // 在JS里面， 可能会定义非常多的相同代码或者功能相似的代码， 这些代码可能需要大量重复使用。
+        // 虽然for循环语句也能实现一些简单的重复操作， 但是比较具有局限性， 此时我们就可以使用JS中的函数。
+        // 函数： 就是封装了一段可被重复调用执行的代码块。 通过此代码块可以实现大量代码的重复使用。
+
+        var sum = 0;
+        for (var i = 0; i <= 100; i++) {
+            sum += i;
+        }
+        console.log(sum);
+
+        // 1、不封装函数：求1-100之间所有数的总和
+
+        function getsum(num1, num2) {
+            var sum = 0;
+            for (var i = num1; i <= num2; i++) {
+                sum += i;
+            }
+            console.log(sum);
+        }
+
+        // 2、函数就是封装了一段可以重复执行调用的代码块；目的：就是让大量代码重读使用，提高代码质量
+
+        getsum(1, 100);
+        // 3、使用封装的函数
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

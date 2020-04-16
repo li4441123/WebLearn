@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>全选案例</title>
+</head>
+
+<body>
+<div>
+    <input class="all" name="" type="checkbox">
+</div>
+
+<input class="a" name="" type="checkbox">
+<input class="a" name="" type="checkbox">
+<input class="a" name="" type="checkbox">
+<input class="a" name="" type="checkbox">
+<input class="a" name="" type="checkbox">
+
+
+<div>
+    <input class="all" name="" type="checkbox">
+</div>
+</body>
+<script src="./res/jquery.min.js"></script>
+<script>
+    $(function () {
+        // 全选：所有小按钮被选择
+        $('.all').change(function () {
+            console.log($(this).prop('checked'));
+            $(".a,.all").prop('checked', $(this).prop('checked'));
+        })
+
+        //小按钮：所有小按钮被单独选择上，全选按钮也会被选择
+        $('.a').change(function () {
+            console.log($('.a:checked').length);
+            console.log($('.a').length);
+            if ($('.a:checked').length === $('.a').length) {
+                $('.all').prop('checked', true);
+            } else {
+                $('.all').prop('checked', false);
+            }
+
+        })
+    })
+</script>
+
+</html>

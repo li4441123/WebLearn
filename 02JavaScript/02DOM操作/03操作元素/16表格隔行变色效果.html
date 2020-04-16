@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>表格隔行变色效果</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    thead {
+        background-color: #96b795;
+        border: 1px solid #333;
+    }
+
+    .bg {
+        background-color: red;
+    }
+</style>
+
+<body>
+<table>
+
+    <thead>
+    <tr>
+        <td>书籍名称</td>
+        <td>编号</td>
+        <td>借书人</td>
+        <td>借书日期</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>代码大全</td>
+        <td>001</td>
+        <td>宋华山</td>
+        <td>2019-11-14</td>
+    </tr>
+    <tr>
+        <td>代码大全</td>
+        <td>001</td>
+        <td>宋华山</td>
+        <td>2019-11-14</td>
+    </tr>
+    <tr>
+        <td>代码大全</td>
+        <td>001</td>
+        <td>宋华山</td>
+        <td>2019-11-14</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<script>
+    // 1.获取元素tbody下的tr
+    var trs = document.querySelector('tbody').querySelectorAll('tr');
+    // 2.循环tr
+    for (var i = 0; i < trs.length; i++) {
+        // 3.鼠标经过tr时,使用className,增加bg类,使颜色变成红色
+        trs[i].onmouseover = function () {
+            this.className = 'bg'
+        }
+        // 4. 鼠标离开tr时, 使用className, 移除增加的bg类, 使其变成默认状态时的颜色
+        trs[i].onmouseout = function () {
+            this.className = '';
+        }
+    }
+</script>
+
+</html>

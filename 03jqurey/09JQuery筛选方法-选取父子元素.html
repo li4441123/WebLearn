@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery筛选方法-选取父子元素</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <p></p>
+</ul>
+
+<div class="f">
+    <p>aaaaaaaaaaaaaaaa</p>
+    <div class="s">
+        <p>bbbbbbbbbbbbbbb</p>
+    </div>
+</div>
+
+</body>
+<script>
+    $(function () {
+        // 1.查找父级(最近一级的父级元素)
+        console.log($('li').parent());
+        console.log($('.son').parent());
+
+        // 2.查找子级(最近一级)，类似div>p ul>li
+        $('.f').children('p').css('color', 'red');
+
+        // 3.查找后代元素,类似后代选择器
+        $('.f').find('p').css('color', 'green');
+    })
+</script>
+
+</html>

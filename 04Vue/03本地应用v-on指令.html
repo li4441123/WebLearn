@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用V-on指令</title>
+</head>
+
+<body>
+<div id="app">
+    <button v-on:click="init">按钮</button>
+    <button @click="doit">按钮2</button>
+    <h2 @click="change">{{ food }}</h2>
+</div>
+</body>
+<script src="./.js"></script>
+<script>
+    // v-on 绑定时间指令 @ 可代替v-on
+    // 方法可通过this关键字访问到data中的数据
+    var app = new Vue({
+        el: "#app",
+        data: {
+            food: '西红柿鸡蛋面'
+        },
+        methods: {
+            init: function () {
+                alert('1');
+            },
+
+            doit: function () {
+                alert(2);
+            },
+
+            change: function () {
+                this.food += "a";
+            }
+        },
+    })
+</script>
+
+</html>

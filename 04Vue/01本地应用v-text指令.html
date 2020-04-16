@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用V-text指令</title>
+</head>
+
+<body>
+<div id="app">
+    <h2 v-text="message + '!'">1</h2>
+    <h2 v-text="info + '!'">1</h2>
+    <h3>{{init}}!</h3>
+</div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: '宋华山',
+            info: '山东省菏泽市单县',
+            init: '整齐划一'
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>短路中断</title>
+    <script>
+        // 短路运算的原理： 当有多个表达式（ 值） 时， 左边的表达式值可以确定结果时， 就不再继续运算右边的表达式的值，
+        //如果有空的或者否定的为假其余是真的,这些都为假： 0 '' null undefined NaN。
+
+        console.log(123 && 456 && 789 && 0); //456
+        console.log(0 && 123); //0
+        console.log('' && 785 * 152); //空
+        // 1、逻辑与短路中断,如果表达式1为真，则返回最后一个表达式的值。 如果表达式1为假，则返回表达式1的值。
+
+
+        console.log(123 || 456); //123
+        console.log(0 || 456 || 789); //456
+        console.log(0 || '' || 123); //123
+        console.log(0 || 0);
+        // 2、逻辑或短路中断,如果表达式1为真， 则返回表达式1的值，后续表达式不执行。 如果表达式1为假， 则返回后一个为真的值。
+
+
+        var num = 0;
+        console.log(123 || num++); //返回123，后续num++未执行，就算是执行了还是为0，先返回原值，再自加1。
+        console.log(num); //因为上个表达式2未执行，所以此处还是为0
+        // 3、案列：逻辑中断很重要，会影响程序执行的结果。
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

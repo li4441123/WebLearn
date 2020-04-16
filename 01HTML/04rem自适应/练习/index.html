@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <script src="./js/flexible.js"></script>
+    <title>flexible练习</title>
+    <style>
+        @media screen and (min-width: 750px) {
+            html {
+                font-size: 75px !important;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            width: 750px;
+            min-width: 320px;
+            max-width: 750px;
+            background-color: #f2f2f2;
+            line-height: 1.5;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10rem;
+            height: 1.173333rem;
+            background-color: #e2e22e;
+        }
+
+        .left {
+            width: .586667rem;
+            height: .933333rem;
+            background: url(./images/classify.png) no-repeat;
+            background-size: .586667rem .933333rem;
+            margin: .146667rem .333333rem .093333rem .32rem;
+        }
+
+        .center {
+            flex: 1;
+            /* background-color: antiquewhite; */
+        }
+
+        .center input {
+            outline: none;
+            width: 100%;
+            height: .88rem;
+            border-radius: .44rem;
+            border: 0;
+            margin-top: .16rem;
+            padding-left: .733333rem;
+            font-size: .333333rem;
+            color: #757575;
+        }
+
+        .right {
+            width: 1rem;
+            height: .933333rem;
+            line-height: .933333rem;
+            text-align: center;
+            margin: .133333rem;
+            font-size: .333333rem;
+            color: #fff;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    <a class="left" href="#"></a>
+    <div class="center">
+        <form action="#">
+            <input type="search" value="测试">
+        </form>
+    </div>
+    <a class="right" href="#">登录</a>
+</header>
+</body>
+
+</html>

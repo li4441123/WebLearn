@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>变量语法拓展</title>
+    <script>
+        var myname = '迪丽热巴';
+        console.log(myname);
+        myname = '杨幂';
+        console.log(myname);
+        //1、变量更新：变量将以最后一次赋值为准，原有的会被覆盖
+
+        var dq = '青岛',
+            xq = '市北区',
+            phone = '114';
+        // 2、声明多个变量的方法
+
+        var sex;
+        console.log(sex);
+        // 3.1、只声明变量， 未赋值。打印结果为undefined,未定义的。
+
+        // console.log(no);
+        // 3.2、不声明，不赋值，直接使用，会报错,报错后，无法执行后续错误。
+
+        diqu = '青岛';
+        console.log(diqu);
+        // 3.3、不声明， 直接使用赋值变量， 可以正常使用， 不提倡， 全局性的。
+        // 声明并赋值是最常用方式
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

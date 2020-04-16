@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>设置自定义属性值</title>
+</head>
+
+<body>
+<div class="2" id="1" index="3"></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    // 1.主要设置内置属性值
+    div.id = 1.1; //id的值变成了1.1
+    div.className = 2.2; //class的值变成了2.2,属性名写className
+
+    // 2.主要设置自定义属性值,也可以设置内置属性的值.
+    div.setAttribute('index', '3.3'); //3.3
+    div.setAttribute('class', '2.3'); //2.3 , 属性名写class
+
+    // 3. 移除属性
+    div.removeAttribute('index');
+</script>
+
+</html>

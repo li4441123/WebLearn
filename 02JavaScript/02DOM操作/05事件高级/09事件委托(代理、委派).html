@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>事件委托(代理、委派)</title>
+</head>
+<style>
+    ul {
+        list-style: none;
+    }
+</style>
+
+<body>
+<ul>
+    <li>庆余年</li>
+    <li>庆余年</li>
+    <li>庆余年</li>
+    <li>庆余年</li>
+    <li>庆余年</li>
+</ul>
+</body>
+<script>
+    var ul = document.querySelector('ul');
+    var li = document.querySelectorAll('li');
+    ul.addEventListener('click', function (e) {
+        // 排他思想
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.backgroundColor = '';
+        }
+        e.target.style.backgroundColor = 'red';
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery基本选择器和层级选择器</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<body>
+<div>标签选择器</div>
+<div class="head">类选择器</div>
+
+<ul>
+    <span>层级选择器</span>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+</body>
+<script>
+    // JQ的选择器使用方法同CSS选择器相同
+    $(function () {
+        console.log($(".head"));
+        console.log($("ul li"));
+
+    })
+</script>
+
+</html>

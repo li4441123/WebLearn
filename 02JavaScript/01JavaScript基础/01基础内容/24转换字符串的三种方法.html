@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>数值转换字符串的三种方法</title>
+    <script>
+        var age = 21;
+        var str = age.toString(); // 变量名称.toString()
+        console.log(typeof str);
+        console.log(str);
+        // 1、 通过toString() 方法去转换成字符串
+
+        var num = 22;
+        var str2 = String(num);
+        console.log(str2); //变量
+        console.log(String(num)); //直接打印
+        // 2、 利用String(变量/值) 函数， 把变量或者值， 嵌套进函数中去， 实现转换
+
+        var num2 = 30;
+        console.log(num2 + '');
+        //***** 3、 利用拼接空字符串， 把数值转换成字符串(重点)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

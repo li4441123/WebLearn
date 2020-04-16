@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>添加和删除数组元素</title>
+    <script>
+        //添加数组元素的几种方法
+        // 后:
+        // 1、 push() 在我们数组末尾, 添加一个或多个数组元素
+        //（1）push 是可以给数组追加新的元素
+        //（2）push（）参数直接写数组元素就可以了
+        //（3）push完毕之后，返回的结果是新数组的长度
+        //（4）原数组也会发生变化了
+        var arr = [];
+        arr.push(1, 2, 3, '宋华山', 4, 5, 6)
+        arr.push(9, 10, 11);
+        console.log(arr);
+
+
+        // 前:
+        // 2、unshift() 在数组开头,添加一个或多个数组元素
+        //（1）unshift 是可以给数组追加新的元素
+        //（2）unshift（）参数直接写数组元素就可以了
+        //（3）unshift完毕之后，返回的结果是新数组的长度
+        //（4）原数组也会发生变化了
+        var arr1 = [0, 1, 2, 3];
+        arr1.unshift(4, 5, 6, 7);
+        console.log(arr1);
+
+
+        // 3、pop(),它可以删除最后一个数组元素,只能删除一个.
+        arr1.pop();
+        console.log(arr1);
+
+        //4、shift可以删除数组的第一个元素,只能删除一个.
+        arr1.shift();
+        console.log(arr1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

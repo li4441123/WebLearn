@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>打印5行5列的星星</title>
+    <script>
+        var str = '';
+        for (var i = 1; i <= 5; i++) { //外层控制打印行数
+            for (var j = 1; j <= 5; j++) { // 内层控制打印列数，也就是一行几个。
+                str += '※';
+            }
+            str += '\n'; // 给已经循环出来的字符串后面，追加一个换行
+        }
+        console.log(str); //最后打印出来
+        //1、双重for循环，打印5行5列的星星
+
+
+        var str = '';
+        var h = prompt('请输入打印行数：');
+        var l = prompt('请输入打印列数：');
+        for (var i = 1; i <= h; i++) {
+            for (var j = 1; j <= l; j++) {
+                str = str + '※';
+            }
+            str += '\n';
+        }
+        console.log(str);
+        //2、双重for循环，用户控制打印n行n列的星星
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

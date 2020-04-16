@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>事件三要素</title>
+</head>
+
+<body>
+<button id="btn">点击我</button>
+</body>
+<script>
+    // 1.事件是有三部分组成,事件源、事件类型、事件处理程序，我们也称之为事件三要素
+    // (1) 事件源: 事件被触发的对象, 谁 按钮
+    var btn = document.getElementById('btn');
+    // (2) 事件类型: 如果触发, 什么事件, 比如: 点击鼠标(onclick)、 鼠标经过、 键盘按下
+    // (3) 事件处理程序: 通过一个函数赋值的方式完成操作
+
+
+    // 2.事件例子:
+    btn.onclick = function () {
+        alert('你真棒');
+    }
+
+    // 理解: 找到它 -- 给他触发条件(点击\经过\按键) -- 触发程序
+</script>
+
+</html>

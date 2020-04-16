@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>利用new Object创建对象</title>
+    <script>
+        var obj = new Object(); //创建空对象
+        obj.uname = 'song'; //给空对象赋值
+        obj.age = 24;
+        obj.sex = 'man';
+        obj.hello = function () {
+            console.log('hello world')
+
+        };
+
+        console.log(obj['uname']);
+        console.log(obj.sex);
+        obj.hello();
+
+        //课堂练习，鸣人
+        var obj2 = new Object();
+        obj2.name = '鸣人';
+        obj2.sex = '男';
+        obj2.age = 16;
+        obj2.skill = function () {
+            console.log('影分身术');
+        }
+        console.log(obj2.name);
+        console.log(obj2.sex);
+        console.log(obj2.age);
+        obj2.skill();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

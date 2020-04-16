@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>淘宝点击关闭二维码</title>
+</head>
+<style>
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        margin: 0 auto;
+    }
+
+    .box i {
+        position: absolute;
+        top: 0;
+        left: 44%;
+        transform: translateX(-44%);
+    }
+</style>
+
+<body>
+<div class="box">
+    <i class="btn">x</i>
+</div>
+</body>
+
+
+<script>
+    var btn = document.querySelector('.btn');
+    var box = document.querySelector('.box');
+    btn.onclick = function () {
+        box.style.display = 'none'; //通过点击btn,隐藏掉box
+    }
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>创建添加删除元素</title>
+</head>
+
+<body>
+<ul>
+    <li>我是一开始的</li>
+</ul>
+<div>w1</div>
+</body>
+<script src="./res/jquery.min.js"></script>
+<script>
+    $(function () {
+        // 创建元素
+        var li = $("<li>我是后来创建的</li>");
+
+        // 内部添加(父子关系)
+        $('ul').prepend(li) //添加在已有元素的前面
+        $('ul').append(li); //添加在已有元素的后面
+
+        // 外部添加（兄弟关系）
+        var div = $("<div>new</div>");
+        $('div').before(div); //添加在已有元素的前面
+        $('div').after(div); //添加在已有元素的后面
+
+        //删除元素
+        $('ul').remove(); //删除元素本身
+        // $('ul').empty(); //删除匹配元素里的子节点
+        // $('ul').html("");//清空匹配元素里的子节点
+
+    })
+</script>
+
+</html>

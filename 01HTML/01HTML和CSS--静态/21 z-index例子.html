@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            float: left;
+            margin-left: -1px;
+            position: relative;
+        }
+
+        div:hover {
+            border: 1px solid red;
+            position: relative; /*相对定位、绝对定位、固定定位都是脱离标准流的，相对定位和浮动的区别在于占有位置和不占有位置*/
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

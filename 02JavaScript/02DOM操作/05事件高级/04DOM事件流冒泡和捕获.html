@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>DOM事件流冒泡和捕获</title>
+</head>
+<style>
+    .father {
+        width: 300px;
+        height: 300px;
+        background-color: #777;
+    }
+
+    .son {
+        width: 150px;
+        height: 150px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+<script>
+    // 01.事件捕获阶段
+    // 02.处于目标阶段
+    // 03.事件冒泡阶段
+
+    var father = document.querySelector('.father');
+    var son = document.querySelector('.son');
+
+    // 1.捕获阶段 自 document -> html -> body -> father -> son ; addEventListener('事件类型',function(){},true)  加true为捕获事件
+    father.addEventListener('click', function () {
+        alert('father');
+    }, true)
+
+    son.addEventListener('click', function () {
+        alert('son');
+    }, true)
+
+
+    // 2. 冒泡阶段, 自事件当前目标(son) - > father - > body - > html - > document;
+    addEventListener('事件类型', function () {
+    }) //第三个参数默认不写, 或者写false为冒泡事件
+    father.addEventListener('click', function () {
+        alert('father');
+    }, false)
+
+    son.addEventListener('click', function () {
+        alert('son');
+    }, false)
+</script>
+
+</html>

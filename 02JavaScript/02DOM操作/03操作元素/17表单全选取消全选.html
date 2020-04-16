@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>表单全选取消全选</title>
+</head>
+<style>
+    .warp {
+        width: 600px;
+        /* height: 900px; */
+        margin: 100px auto;
+        border: 1px solid #666;
+    }
+
+    thead {
+        width: 900px;
+        height: 100px;
+        background-color: #4c9eff;
+    }
+
+    td {
+        width: 300px;
+    }
+</style>
+
+<body>
+<div class="warp">
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <input id="j_cbx" type="checkbox">
+            </th>
+            <td>商品</td>
+            <td>价格</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>
+                <input type="checkbox">
+            </th>
+            <td>iphone X</td>
+            <td>9999</td>
+        </tr>
+        <tr>
+            <th>
+                <input type="checkbox">
+            </th>
+            <td>ipad 2019</td>
+            <td>3999</td>
+        </tr>
+        <tr>
+            <th>
+                <input type="checkbox">
+            </th>
+            <td>ipod 2018</td>
+            <td>1999</td>
+        </tr>
+        <tr>
+            <th>
+                <input type="checkbox">
+            </th>
+            <td>iphone 6</td>
+            <td>2999</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+<script>
+    var cbx = document.getElementById('j_cbx');
+    var cbxs = document.querySelector('tbody').querySelectorAll('input');
+    // 1.点击全选,取消全选
+    cbx.onclick = function () {
+        for (var i = 0; i < cbxs.length; i++) {
+            cbxs[i].checked = this.checked;
+        }
+    }
+
+    // 2.完善功能:每点击一次下面的小按钮,都会判断一次,这些按钮有没有都被勾选,如果没有,全选按钮就不会被勾选,如果小按钮都被勾选,全选按钮也会被勾选
+    // (1)给每个cbxs绑定点击事件
+    for (var i = 0; i < cbxs.length; i++) {
+        cbxs[i].onclick = function () {
+            var flag = true;
+            // (2) 判断cbxs里是否还有没被选中的, 如果有, 则全选按钮状态为false, 如果都选中了, 全选按钮为true
+            for (var i = 0; i < cbxs.length; i++) {
+                if (!cbxs[i].checked) { //没有被选中
+                    flag = false;
+                    break; //只要按钮有一个没被选中,就不需要再循环了,提高执行效率
+                }
+            }
+            // flag变量为true还是false,取决于cbxs所有选择按钮,有没有全部被选中
+            cbx.checked = flag;
+        }
+    }
+</script>
+
+</html>

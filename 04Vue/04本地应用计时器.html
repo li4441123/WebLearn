@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用计时器</title>
+</head>
+<style>
+    #app {
+        width: 150px;
+        display: flex;
+        justify-content: space-between;
+        margin: 50px auto;
+    }
+
+    #app > button {
+        width: 45px;
+        background-color: #fff;
+    }
+</style>
+
+<body>
+<div id="app">
+    <button @click="sub">-</button>
+    <span>{{num}}</span>
+    <button @click="add">+</button>
+</div>
+</body>
+<script src="./res/vue.js"></script>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            num: 1
+        },
+        methods: {
+            sub: function () {
+                if (this.num > 0) {
+                    this.num--;
+                } else {
+                    alert('别减了，没有了')
+                }
+            },
+            add: function () {
+                if (this.num < 10) {
+                    this.num++;
+                } else {
+                    alert('太大了，别加了')
+                }
+            }
+        },
+
+    })
+</script>
+
+</html>

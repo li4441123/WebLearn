@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用v-bind指令</title>
+</head>
+<style>
+    .active {
+        border: 1px solid red;
+    }
+</style>
+
+<body>
+<div id="app">
+    <img @click="change" alt="" v-bind:class="{active:iactive}" v-bind:src="isrc" v-bind:title="ititle">
+</div>
+</body>
+<script src="./res/vue.js"></script>
+<script>
+    // v - bind 修改属性值
+    var app = new Vue({
+        el: "#app",
+        data: {
+            isrc: "../03jqurey/res/jq操作css方法.png",
+            ititle: "title联系",
+            iactive: false
+        },
+        methods: {
+            change: function () {
+                this.iactive = !this.iactive;
+            }
+        },
+    })
+</script>
+
+</html>

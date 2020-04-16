@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+</head>
+<style>
+    .pt {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        border: 1px solid #ccc;
+    }
+
+    .bg {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        opacity: 0.5;
+        cursor: move;
+    }
+
+    .big {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: absolute;
+        left: 510px;
+        top: 0;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+
+    .bim {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
+
+<body>
+<div class="pt">
+    <!-- 小 -->
+    <img alt="Q0zhPs.jpg" border="0" src="https://s2.ax1x.com/2019/12/10/Q0zhPs.jpg">
+
+    <!-- 放大镜 -->
+    <div class="bg"></div>
+
+    <div class="big">
+        <!-- 大 -->
+        <img alt="Q0z4Gn.jpg" border="0" class="bim" src="https://s2.ax1x.com/2019/12/10/Q0z4Gn.jpg">
+    </div>
+</div>
+</body>
+
+<script>
+    var pt = document.querySelector('.pt');
+    var bg = document.querySelector('.bg');
+    var big = document.querySelector('.big');
+
+    pt.addEventListener('mouseover', function () {
+        bg.style.display = 'block';
+        big.style.display = 'block';
+    })
+
+    pt.addEventListener('mouseout', function () {
+        bg.style.display = 'none';
+        big.style.display = 'none';
+    })
+
+    pt.addEventListener('mousemove', function (e) {
+        var x = e.pageX - this.offsetLeft;
+        var y = e.pageY - this.offsetTop;
+
+        var bgX = x - bg.offsetWidth / 2;
+        var bgY = y - bg.offsetHeight / 2;
+
+        var bgXmax = pt.offsetWidth - bg.offsetWidth;
+        var bgYmax = pt.offsetHeight - bg.offsetHeight;
+
+        if (bgX <= 0) {
+            bgX = 0;
+        } else if (bgX > bgXmax) {
+            bgX = bgXmax;
+        }
+
+        if (bgY <= 0) {
+            bgY = 0;
+        } else if (bgY > bgYmax) {
+            bgY = bgYmax;
+        }
+        bg.style.top = bgY + 'px';
+        bg.style.left = bgX + 'px';
+
+        var bim = document.querySelector('.bim');
+        bim.style.top = -bgY * 2 + 'px';
+        bim.style.left = -bgX * 2 + 'px';
+    })
+</script>
+
+</html>

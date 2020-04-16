@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>函数之间是可以调用得</title>
+    <script>
+        // 函数是可以相互调用的
+        function fn1() {
+            console.log('函数1');
+            fn2(); //再函数1里调用函数2
+        }
+
+        function fn2() {
+            console.log('函数2');
+        }
+
+        fn1();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

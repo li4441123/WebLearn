@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery其它筛选方法</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<body>
+<ul>
+    <li>我是ul下的li</li>
+    <li>我是ul下的li</li>
+    <li>我是ul下的li</li>
+    <li>我是ul下的li</li>
+    <li class="item">我是ul下的li</li>
+    <li>我是ul下的li</li>
+    <li>我是ul下的li</li>
+</ul>
+
+<ol>
+    <li>我是ol下的li</li>
+    <li>我是ol下的li</li>
+    <li>我是ol下的li</li>
+    <li>我是ol下的li</li>
+    <li>我是ol下的li</li>
+</ol>
+<div class="current"></div>
+<div></div>
+</body>
+<script>
+    $(function () {
+        // 1. 兄弟选择方法 siblings （除了自身之外的）
+        $('ul .item').siblings().css('color', 'red')
+
+        // 2. 选择第N个元素 eq()
+        // $('ul li:eq(3)').css('color', 'red'); //与此用法相同
+        $('ol li').eq(2).css('color', 'pink'); //推荐这种
+
+        // 3. 判断某个元素是否有特定类名的方法  hasClass 如果有则返回true
+        console.log($('div:first').hasClass('current'));
+        console.log($('div:last').hasClass('current'));
+
+
+    })
+</script>
+
+</html>

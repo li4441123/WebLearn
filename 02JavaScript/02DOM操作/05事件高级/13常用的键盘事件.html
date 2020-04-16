@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>常用的键盘事件</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1.1 onkeyup , 某个键盘按键松开后触发事件
+    document.onkeyup = function () {
+        console.log('键盘弹起');
+    }
+
+    // 1.2 keyup , 某个键盘按键松开后触发事件    
+    document.addEventListener('keyup', function () {
+        console.log('键盘弹起');
+    })
+
+    // 2.1 onkeydown , 某个键盘按键按下后触发事件
+    document.onkeydown = function () {
+        console.log('键盘按下');
+    }
+
+    // 2.2 keydown, 某个键盘按键按下后触发事件
+    document.addEventListener('keydown', function () {
+        console.log('键盘按下');
+    })
+
+    // 3.1 onkeypress , 某个键盘按键按下后触发事件,但是不识别功能按键,例如:ctrl\shift
+    document.onkeypress = function () {
+        console.log('键盘按下press');
+    }
+
+    // 3.2 keypress , 某个键盘按键按下后触发事件,但是不识别功能按键,例如:ctrl\shift
+    document.addEventListener('keypress', function () {
+        console.log('键盘按下press');
+    })
+</script>
+
+</html>

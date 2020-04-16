@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>作业</title>
+    <script>
+        function Computer(color, weight, brand, model) {
+            this.color = color;
+            this.weight = weight;
+            this.brand = brand;
+            this.model = model;
+            this.action = function (at) {
+                console.log(at);
+            }
+        }
+
+        var lianxiang = new Computer('黑色', '5KG', '美帝良心响', 'x15');
+        for (var k in lianxiang) {
+            console.log(lianxiang[k]);
+        }
+        //对象遍历
+        lianxiang.action('看电影、打游戏、听音乐、敲代码');
+        //1-1：构造函数形式创建对象
+        console.log('-----------------------------------------');
+
+
+        var computer2 = new Object();
+        computer2.color = '白色';
+        computer2.weight = '150g';
+        computer2.brand = '爱国为';
+        computer2.model = 'p30';
+        for (var key in computer2) {
+            console.log(computer2[key]);
+        }
+        //对象遍历
+        // 1-2:new object()创建对象
+        console.log('-----------------------------------------');
+
+
+        var computer3 = {
+            color: 'red',
+            weight: 150,
+            brand: 'MI',
+            model: 'k20'
+        }
+        for (var kk in computer3) {
+            console.log(computer3[kk]);
+        }
+        //对象遍历
+        //1-3:字面量创建对象
+
+
+        console.log('-----------------------------------------');
+
+        function button(w, h, bg) {
+            this.w = w;
+            this.h = h;
+            this.bg = bg;
+            this.onclick = function (ok) {
+                console.log(ok);
+            }
+        }
+
+        var redb = new button(150, 200, 'red');
+        for (var k in redb) {
+            console.log(redb[k]);
+        }
+        //遍历对象
+        redb.onclick('变高');
+        // 2-1:构造函数形式创建对象
+        console.log('-----------------------------------------');
+
+        var buleb = new Object();
+        buleb.w = 155;
+        buleb.h = 150;
+        buleb.bg = 'blue';
+        buleb.onclick = function (ok) {
+            console.log(ok);
+        };
+        for (var k in buleb) {
+            console.log(buleb[k]);
+
+        }
+        buleb.onclick('nihao');
+        //遍历对象
+        // 2-2:new object()创建对象
+        console.log('-----------------------------------------');
+
+        var yellow = {
+            w: 140,
+            h: 145,
+            bg: 'yellow',
+            onclick: function (ok) {
+                console.log(ok);
+            }
+        }
+        for (var k in yellow) {
+            console.log(yellow[k]);
+
+        }
+        //对象遍历
+        //2-3:字面量创建对象
+        console.log('-----------------------------------------');
+
+        function car(w, c, p) {
+            this.w = w;
+            this.c = c;
+            this.p = p;
+            this.f = function (ok) {
+                console.log(ok);
+            };
+        }
+
+        var fengtian = new car('750KG', 'red', 'fengtian');
+        for (var k in fengtian) {
+            console.log(fengtian[k]);
+        }
+        fengtian.f('载人飞天');
+        console.log('-----------------------------------------');
+
+        var dazhong = new Object();
+        dazhong.w = '800kg';
+        dazhong.c = '黑色';
+        dazhong.p = '大众';
+        dazhong.f = function (ok) {
+            console.log(ok);
+        }
+        dazhong.f('我是大众');
+        for (var k in dazhong) {
+            console.log(dazhong[k]);
+        }
+        console.log('-----------------------------------------');
+        var qq = {
+            w: '700kg',
+            c: '蓝色',
+            p: 'qq',
+            f: function (ok) {
+                console.log(ok);
+            }
+        }
+        qq.f('我是QQ');
+        for (var k in qq) {
+            console.log(qq[k]);
+        }
+        console.log('-----------------------------------------');
+
+
+        function getarr(arr) {
+            var newarr = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                newarr[newarr.length] = arr[i];
+            }
+            return newarr;
+        }
+
+        var color = getarr(['blue', 'red', 'pink', 'yellow'])
+        console.log(color);
+        var nub = getarr([1, 2, 3, 4, 5, 6]);
+        console.log(nub);
+        //翻转数组
+        console.log('-----------------------------------------');
+
+        function sort() {
+            for (var i = 0; i <= arguments.length - 1; i++) {
+                for (var j = 0; j <= arguments.length - i - 1; j++) {
+                    if (arguments[j] > arguments[j + 1]) {
+                        var temp = arguments[j];
+                        arguments[j] = arguments[j + 1];
+                        arguments[j + 1] = temp;
+                    }
+                }
+            }
+            return arguments;
+        }
+
+        console.log(sort(1, 5, 8, 9, 45, 12, 36, 918, 65, 42, 48, 46, 52, 35, 78, 98));
+        // console.log(sort([9, 8, 7, 54, 12, 35, 47, 85, 96, 21, 15, 16, 18, 19, 71, 16, 25, 36, 54, 78, 89, 99999]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

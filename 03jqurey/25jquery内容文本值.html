@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>jquery内容文本值</title>
+</head>
+
+<body>
+<div>
+    <p>沧海一声笑</p>
+</div>
+</body>
+<script src="./res/jquery.min.js"></script>
+<script>
+    $(function () {
+        // 获取文本元素
+        console.log($('div').html());
+        $('div').html('滔滔两岸潮');
+        console.log($('div').html());
+
+        // 获取文本内容
+        $('div').text('123木头人');
+    })
+</script>
+
+</html>

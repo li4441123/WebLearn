@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>接受参数</title>
+</head>
+
+<body>
+<div></div>
+</body>
+<script>
+    // 1.把location.search(从login页面传来的参数)里的参数截取掉问号,利用substr()方法
+    var parms = location.search.substr(1);
+    // 2.把parms参数转换成数组,利用split('=')对象
+    var arr = parms.split('=');
+    // 3.获取元素
+    var div = document.querySelector('div');
+    // 4.把数组里的内容展示到div里
+    div.innerHTML = arr[1] + '欢迎您';
+</script>
+
+</html>

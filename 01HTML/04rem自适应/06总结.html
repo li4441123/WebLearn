@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+</head>
+<body>
+<h1>rem自适应原理</h1>
+<div>方案1:</div>
+<p>屏幕分成10/15/，只要适配的时候，保证统一</p>
+<p>1、UI设计图尺寸（750） / 10/15/多少都行 = 媒体查询下html要设置得字体大小。 -- 获取到字体大小，这个字体大小是不变得，除非你得设计稿有变化。</p>
+<p>2、其它尺寸要适配，就写媒体查询，用要适配的尺寸 / 10/15/多少都行 -- 这样就能实现多种不同尺寸屏幕的适配，详情查询common.less</p>
+<p>3、为了方便维护css样式，这里我们使用less拓展，如果后期需要修改基准尺寸，只需要修改变量即可。</p>
+
+
+<h1>flexible自适应</h1>
+<div>方案2：</div>
+<p>1、引入flexible.js,remcss插件设置好字体大小，设置要求，UI设计图的尺寸 / 10 获得的字体大小。就ok了</p>
+
+
+<h1>两者都是通过html字体的变化，来进行等比例的缩放。</h1>
+<p>方案1是通过写几个常用的媒体查询控制html字体大小，再加上less辅助，操作灵便。</p>
+<P> 方案2是通过引入flexible.js，进行适配，循序渐进。我们只要知道UI设计图的宽度 / 10，就是设置remcss的字体大小值。余下就是照着UI图进行布局</P>
+
+</body>
+</html>

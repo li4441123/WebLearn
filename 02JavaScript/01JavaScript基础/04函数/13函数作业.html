@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>函数作业</title>
+    <script>
+        function getSum() {
+            var op = prompt('请输入运算方式：\n1.加法\n2.减法\n3.乘法\n4.除法');
+            var n1 = prompt('请输入第一个数字：');
+            var n2 = prompt('请输入第二个数字：');
+            switch (op) {
+                case '1':
+                    return parseFloat(n1) + parseFloat(n2);
+                    break;
+                case '2':
+                    return parseFloat(n1) - parseFloat(n2);
+                    break;
+                case '3':
+                    return parseFloat(n1) * parseFloat(n2);
+                    break;
+                case '4':
+                    return parseFloat(n1) / parseFloat(n2);
+                    break;
+                default:
+                    return op;
+            }
+        }
+
+        var res = getSum();
+        alert(res);
+
+        // 1、 任意两个数的任意算术运算， 并能弹出结果
+
+
+        function isPrime() {
+            var num = Number(prompt("请输入一个正整数,判断此数是不是素数"));
+            var count = 0; //统计因子个数
+            for (var i = 1; i <= num; i++) {
+                if (num % i == 0) { //因子
+                    count++;
+                }
+            }
+            //循环结束后 如果 count == 2  一定是素数
+            if (count == 2) {
+                return num + '是素数';
+            } else {
+                return num + '不是素数';
+            }
+        }
+
+        alert(isPrime());
+        // 2、用户输入一个数判断是否是素数，并返弹出回值（又叫质数，只能被1和自身整数的数）
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

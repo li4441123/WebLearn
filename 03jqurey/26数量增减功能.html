@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>数量增减功能</title>
+</head>
+<style>
+    button {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    input {
+        display: inline-block;
+        width: 30px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+<div class="con">
+    <button class="less">-</button>
+    <input class="tx" type="text" value="1">
+    <button class="plus">+</button>
+
+</div>
+
+<div class="con">
+    <button class="less">-</button>
+    <input class="tx" type="text" value="2">
+    <button class="plus">+</button>
+</div>
+
+<div class="con">
+    <button class="less">-</button>
+    <input class="tx" type="text" value="3">
+    <button class="plus">+</button>
+</div>
+
+<div class="con">
+    <button class="less">-</button>
+    <input class="tx" type="text" value="4">
+    <button class="plus">+</button>
+</div>
+</body>
+<script src="./res/jquery.min.js"></script>
+<script>
+    $(function () {
+        // 1、数量增减：修改的是当前的，不是所有的
+        // 2、 所以我们要修改我们当前点击按钮的增加 / 减少按钮的旁边的元素值（ 兄弟元素）， 这样只修改一个，而不是改所有
+        $('.plus').click(function () {
+            var n = $(this).siblings('.tx').val();
+            n++;
+            $(this).siblings('.tx').val(n);
+        })
+
+        $('.less').click(function () {
+            var n = $(this).siblings('.tx').val();
+            if (n <= 0) {
+                return;
+            } else {
+                n--;
+                $(this).siblings('.tx').val(n);
+            }
+
+        })
+    })
+</script>
+
+</html>

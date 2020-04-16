@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>利用构造函数创建对象</title>
+    <script>
+        function 构造函数名() {
+            this.属性 = 值;
+            this.方法 = function () {
+                console.log('这是方法');
+            }
+        }
+
+        创建构造函数
+
+        new 构造函数名称();
+        调用构造函数
+
+
+        function Star(uname, age, sex) {
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function (song) {
+                console.log(song);
+
+            }
+        }
+
+        var ldh = new Star('刘德华', 55, '男'); //调用函数，返回的是一个对象
+        console.log(ldh);
+        console.log(ldh.uname);
+        console.log(ldh.age);
+        console.log(ldh.sex);
+        ldh.sing('笨小孩');
+
+        // 1、 构造函数名称， 首字母要大写
+        // 2、构造函数不需要return就能返回结果
+        // 3、我们调用构造函数，必须使用new
+        // 4、我们只要new了一下构造函数（new Star()）,就相当于创建了一个对象
+        // 5、属性方法前，必须添加this
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html

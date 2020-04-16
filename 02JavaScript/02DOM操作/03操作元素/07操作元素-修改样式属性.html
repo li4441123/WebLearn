@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>操作元素-修改样式属性</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<div></div>
+</body>
+<script>
+    // JS修改完CSS后,产生的是行内样式,css权重比较高
+    // 修改的style名称是使用的驼峰命名法,跟css有所不同
+    var div = document.querySelector('div');
+    div.onclick = function () {
+        this.style.backgroundColor = 'red';
+        this.style.width = '1000px';
+    }
+</script>
+
+</html>

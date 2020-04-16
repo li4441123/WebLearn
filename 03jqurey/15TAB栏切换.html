@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>tab栏切换</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+<style>
+    li {
+        list-style: none;
+        float: left;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #eff0ef;
+    }
+
+    .clearfix:after {
+        /*伪元素是行内元素 正常浏览器清除浮动方法*/
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        *zoom: 1;
+        /*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+    }
+
+    .bg {
+        background-color: red;
+        color: #fff;
+    }
+
+    .tbd {
+        width: 100px;
+        text-align: center;
+        margin: 10px 25px;
+    }
+
+    .item {
+        display: none;
+    }
+</style>
+
+<body>
+<div class="table clearfix">
+    <ul>
+        <li class="bg">首页</li>
+        <li>监控</li>
+        <li>我的</li>
+    </ul>
+</div>
+
+<div class="tbd">
+    <div class="item" style="display: block;">我是首页</div>
+    <div class="item">我是监控</div>
+    <div class="item">我是我的</div>
+</div>
+</body>
+<script>
+    $(function () {
+        $('.table li').click(function () {
+            $(this).addClass('bg').siblings().removeClass('bg');
+            var index = $(this).index();
+            $('.tbd div').eq(index).show().siblings().hide();
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>利用函数封装冒泡排序</title>
+    <script>
+        function sort() {
+            for (var i = 0; i <= arguments.length - 1; i++) {
+                for (var j = 0; j <= arguments.length - i - 1; j++) {
+                    if (arguments[j] > arguments[j + 1]) {
+                        var temp = arguments[j];
+                        arguments[j] = arguments[j + 1];
+                        arguments[j + 1] = temp;
+                    }
+                }
+            }
+            return arguments;
+        }
+
+        console.log(sort(45, 78, 25, 48, 65, 24, 15, 689, 745, 12, 45, 365, 74));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

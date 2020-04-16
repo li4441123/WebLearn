@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>操作元素之改变元素内容</title>
+</head>
+
+<body>
+<button>显示当前时间</button>
+<div></div>
+<p></p>
+</body>
+<script>
+    //获取元素
+    var btn = document.querySelector('button');
+    var text = document.querySelector('div');
+
+    //获取当前时间函数
+    function getDate() {
+        var D = new Date();
+        var year = D.getFullYear();
+        var month = D.getMonth() + 1;
+        var date = D.getDate();
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        var day = D.getDay();
+        return '今天是:' + year + '年' + month + '月' + date + '日, ' + arr[day];
+    }
+
+    //事件绑定及程序处理
+    btn.onclick = function () {
+        text.innerText = getDate();
+    }
+
+
+    // 获取元素
+    var p = document.querySelector('p');
+    //不绑定任何事件,直接使用
+    p.innerText = getDate();
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>筛选数组方法1</title>
+    <script>
+        var arr = [155, 189, 5, 15, 7, 9, 45, 23, 4, 3, 8, 10];
+        var newArr = [];
+        var j = 0; //方案1：声明一个变量j=0;从0开始，满足条件就会存进去一个。不用跟随i的循环次数，这样就不会夹杂空元素。
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] >= 10) {
+                // 新数组索引号应该从来开始， 依次递增， 不能用使用i,如果用i，小于10的虽然会被跳过，但是仍会已empty的形式，保存进去。
+                newArr[j] = arr[i];
+                j++
+            }
+        }
+        console.log(newArr);
+        //方案1完成
+
+
+        var arr2 = [];
+        arr2[2] = 's';
+        console.log(arr2);
+        //给一个空数组新增元素，不从0开始，从2开始，会造成前两个元素为empty（空）.
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

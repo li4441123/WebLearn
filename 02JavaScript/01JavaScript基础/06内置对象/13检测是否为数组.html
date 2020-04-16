@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>检测是否为数组</title>
+    <script>
+        // 第一种方法: instanceof 运算符
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array); // true
+        console.log(obj instanceof Array); // false
+
+        // 案例1:
+        function getarr(arr) {
+            var newarr = [];
+            if (arr instanceof Array) {
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    newarr[newarr.length] = arr[i];
+                }
+                return newarr;
+            } else {
+                return '这个数据,不是数组,请重新输入';
+            }
+        }
+
+        console.log(getarr([1, 2, 3, 4]));
+
+
+        //第二种方法: Array.isArray(); H5新增方法,IE9以上支持
+        var arr1 = [];
+        var obj1 = {};
+        console.log(Array.isArray(arr1)); // true
+        console.log(Array.isArray(obj)); // false
+
+        // 案例2:
+        function getarr(arr) {
+            var newarr = [];
+            if (Array.isArray(arr)) {
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    newarr[newarr.length] = arr[i];
+                }
+                return newarr;
+            } else {
+                return '这个数据,不是数组,请重新输入';
+            }
+        }
+
+        console.log(getarr([1, 2, 3, 4]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

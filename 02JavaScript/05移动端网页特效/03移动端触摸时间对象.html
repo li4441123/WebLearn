@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>移动端触摸时间对象</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<div></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+
+    div.addEventListener('touchstart', function (e) {
+        console.log(e.touches);
+        // 1.正在触摸当前屏幕的所有手指的列表
+
+        console.log(e.targetTouches);
+        // 2.正在触摸当前元素的所有手指的列表（常用）
+        console.log(e.targetTouches[0]);
+        // 2.1 获取到第一个手指的相关信息
+
+        console.log(e.changedTouches);
+        // 3.手指状态发生改变的列表，从无到有，从有到无的状态变化。
+    })
+
+
+    // 手指离开dom元素
+    div.addEventListener('touchend', function (e) {
+        console.log(e);
+        // 当我们手指离开屏幕的时候，就没有了touches和targetTouches列表
+        // 但是会有changedTouches
+    })
+</script>
+
+</html>

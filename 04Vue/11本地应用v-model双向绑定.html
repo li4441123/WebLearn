@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用v-model双向绑定</title>
+</head>
+
+<body>
+<div id="app">
+    <input @click="change" type="button" value="修改">
+    <input @keyup.enter="tt" type="text" v-model="msg">
+    <h1 v-text="msg"></h1>
+</div>
+</body>
+<script src="./res/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            msg: "数据双向绑定"
+        },
+        methods: {
+            change: function () {
+                this.msg = "暂停绑定"
+            },
+            tt: function () {
+                alert(this.msg);
+            }
+
+        }
+    })
+</script>
+
+</html>

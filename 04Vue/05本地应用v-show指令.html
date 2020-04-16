@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用v-show指令</title>
+</head>
+<style>
+    p {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+</style>
+
+<body>
+<div id="app">
+    <input @click="change" type="button" value="显示和隐藏">
+    <p v-show="ISshow"></p>
+</div>
+</body>
+<script src="./res/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            ISshow: false
+        },
+        methods: {
+            change: function () {
+                this.ISshow = !this.ISshow;
+            }
+        },
+    })
+</script>
+
+</html>

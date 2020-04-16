@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>百度换肤</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+        background: url(https://s2.ax1x.com/2019/11/08/MEOcXn.jpg) no-repeat;
+    }
+
+    li {
+        float: left;
+        list-style: none;
+    }
+
+    li img {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+<ul class="baidu">
+    <li><img alt="" src="https://s2.ax1x.com/2019/11/08/MEOcXn.jpg"></li>
+    <li><img alt="" src="https://s2.ax1x.com/2019/11/08/MEOL0x.jpg"></li>
+    <li><img alt="" src="https://s2.ax1x.com/2019/11/08/MEOqn1.jpg"></li>
+    <li><img alt="" src="https://s2.ax1x.com/2019/11/08/MEOHXR.jpg"></li>
+</ul>
+
+</body>
+<script>
+    // 1.获取元素
+    var imgs = document.querySelector('.baidu').querySelectorAll('img');
+    var body = document.body;
+
+    // 2.for循环遍历出每个img元素,并为其绑定点击事件
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].onclick = function () {
+            // 3.通过点击小图片,改变body的背景图片
+            body.style.backgroundImage = 'url(' + this.src + ')'
+        }
+    }
+</script>
+
+</html>

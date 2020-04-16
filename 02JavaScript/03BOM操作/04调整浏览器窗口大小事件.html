@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>调整浏览器窗口大小事件</title>
+</head>
+<script>
+    // 1. window.onresize 是调整窗口大小加载事件，当触发时就调用的处理函数。
+    // 2. 只要窗口大小发生像素变化， 就会触发这个事件。
+    // 3. 我们经常利用这个事件完成响应式布局。 window.innerWidth当前屏幕的宽度
+    window.addEventListener('load', function () {
+        var div = document.querySelector('div');
+        window.addEventListener('resize', function () {
+            if (windows.innerWidth < 800) { //innerWidth当前浏览器的宽度
+                div.style.display = 'none';
+            } else {
+                div.style.display = 'block';
+            }
+
+        })
+    })
+</script>
+
+<body>
+<div style="width: 200px;height: 200px;background-color: pink;"></div>
+</body>
+
+
+</html>

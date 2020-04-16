@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>遍历数组</title>
+    <script>
+        // 通过遍历, 把数组里的元素, 一次性全部取出
+        var arr = ['宋华山', '1995-11-11', '山东', 17611161195];
+        var str = '';
+        for (var i = 0; i <= 3; i++) {
+            str += arr[i];
+            str += '\n';
+        }
+        console.log(str);
+        //1、自己写的方式,拼接到一行了
+        // -----------------------------------------------------------------------------------
+
+        for (var i = 0; i <= 3; i++) {
+            console.log(arr[i]); // 计数器当索引号来使用
+        }
+        //2、pink方式,简单
+
+
+        var arr2 = [' 关羽', ' 张飞', ' 马超', ' 赵云', ' 黄忠', ' 刘备', ' 姜维']
+        for (var i = 0; i <= 6; i++) {
+            console.log(arr2[i]);
+        }
+        // 3、课堂案例，依次打印三国人物到控制台
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

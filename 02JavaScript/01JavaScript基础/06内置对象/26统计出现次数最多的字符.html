@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-05 10:06:03
+ * @LastEditTime: 2019-11-05 10:20:14
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \HTML-CSS-JS\02JavaScript\01JavaScript基础\06内置对象\26统计出现次数最多的字符.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>统计出现次数最多的字符</title>
+    <script>
+        // 1.统计出现次数最多的字符,存储到对象obj中
+        var str = 'songhuashansonghuashan';
+        var obj = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (obj[chars]) {
+                obj[chars]++;
+            } else {
+                obj[chars] = 1;
+            }
+
+        }
+        console.log(obj);
+
+        //2.遍历对象obj,获取到出现次数最多的字符
+        var max = 0;
+        var cs = '';
+        for (var k in obj) {
+            if (obj[k] > max) {
+                max = obj[k];
+                cs = k;
+            }
+        }
+        console.log(cs, max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

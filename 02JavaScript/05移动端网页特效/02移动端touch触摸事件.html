@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>移动端touch触摸事件</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<div></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    // 1. 手指触摸元素事件
+    div.addEventListener('touchstart', function () {
+        console.log('触摸开始');
+    })
+
+    // 2. 手指触摸移动元素事件
+    div.addEventListener('touchmove', function () {
+        console.log('触摸移动');
+    })
+
+    // 3. 手指触摸结束元素事件
+    div.addEventListener('touchend', function () {
+        console.log('触摸结束');
+    })
+</script>
+
+</html>

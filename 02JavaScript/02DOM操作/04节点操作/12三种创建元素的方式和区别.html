@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>三种创建元素的方式和区别</title>
+</head>
+
+<body>
+<div id="a"></div>
+</body>
+<script>
+    // 1.document.write() 文档流执行完毕后， 会重绘页面
+    // 略
+
+    // 2.element.innerHTML  效率最高，前提是不采用拼接字符串的形式，而是采用数组拼接形式
+    var a = document.querySelector('#a');
+    var arr = [];
+    for (var i = 0; i <= 100; i++) {
+        arr.push('<a>123</a>'); //1.把要添加的元素推到数组中
+    }
+    a.innerHTML = arr.join('&'); //2.把数组展示到div中
+
+    // 3.document.createElement('element') 结构清晰
+    // 略
+</script>
+
+</html>

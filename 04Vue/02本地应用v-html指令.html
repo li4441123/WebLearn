@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用V-html指令</title>
+</head>
+
+<body>
+<div id="app">
+    <p v-html="content"></p>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    // v - html(可解析HTML结构)指令 和 v-text(只解析文本)指令相同， 类似于innHTML和innText
+    var app = new Vue({
+        el: "#app",
+        data: {
+            content: '<a href="#">你好</a>'
+        }
+    })
+</script>
+
+</html>

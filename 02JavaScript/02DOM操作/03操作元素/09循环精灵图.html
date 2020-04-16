@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>循环精灵图</title>
+</head>
+<style>
+    .box {
+        width: 350px;
+        margin: 100px auto;
+    }
+
+    ul li {
+        width: 24px;
+        height: 24px;
+        background: url(https://s2.ax1x.com/2019/11/07/MkFWse.png) no-repeat;
+        list-style: none;
+        float: left;
+        margin: 15px;
+    }
+</style>
+
+<body>
+<div class="box">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+</body>
+<script>
+    // 1.获取li标签元素
+    var li = document.querySelectorAll('li');
+    // 2.循环li标签元素
+    for (var i = 0; i < li.length; i++) {
+        var index = i * 44; //核心算法: 通过i * 精灵图之间的间隔,就能循环出所有小精灵图
+        li[i].style.backgroundPosition = '0 -' + index + 'px'; //为每一个li标签元素设置位置
+    }
+</script>
+
+</html>

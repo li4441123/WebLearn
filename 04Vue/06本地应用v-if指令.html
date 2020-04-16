@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用v-if指令</title>
+</head>
+<style>
+    p {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+</style>
+
+<body>
+<div id="app">
+    <input @click="change" type="button" value="显示和隐藏">
+    <p v-if="isif"></p>
+    <p v-if="age>50"></p>
+</div>
+</body>
+<script src="./res/vue.js"></script>
+<script>
+    // v-if 和 v-show 作用相同，本质区别是v-if是以删除和增加DOM元素来实现的显示和隐藏。v-show是改变css样式实现显示和隐藏。
+    // 频繁显示和隐藏使用v-show
+    // v-if 和 v-show里都可以写表达式判断
+    var app = new Vue({
+        el: "#app",
+        data: {
+            isif: false,
+            age: 49
+        },
+        methods: {
+            change: function () {
+                this.isif = !this.isif;
+            }
+        },
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>遍历对象</title>
+    <script>
+        var obj = new Object();
+        obj.name = '我不是空对象了';
+        console.log(obj);
+        // 复习对象创建方法
+        // ---------------------------------------------------
+
+
+        var obj2 = {
+            name: '送别',
+            year: 1435,
+            type: '诗'
+        }
+        for (var k in obj2) {
+            console.log(k); // K：只打印出属性名称，没有值。
+            console.log(obj2[k]); // obj2[k]:打印出属性值。 *常用*
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

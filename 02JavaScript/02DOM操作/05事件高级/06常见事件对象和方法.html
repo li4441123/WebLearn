@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>常见事件对象和方法</title>
+</head>
+
+<body>
+<div style="width: 100px;height: 100px;background-color: pink;"></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    // 1.e.target 和 this 的区别, e.target返回的是当前点击的元素 , this是返回当前绑定事件的元素
+    div.addEventListener('click', function (e) {
+        console.log(e.target);
+        console.log(this);
+    })
+
+    // 2.兼容性IE678解决方案
+    div.onclick = function (e) {
+        e = e || windows.event;
+        var target = e.target || e.srcElement;
+        console.log(target);
+    }
+
+    // 3. 了解跟this有个非常相似的属性currentTarget ie678不兼容
+</script>
+
+</html>

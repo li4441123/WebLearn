@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>typeof检测变量的数据类型</title>
+    <script>
+        var num = 21;
+        console.log(typeof num); //number 数值
+
+        var str = '你猜';
+        console.log(typeof str); //string 字符串
+
+        var bl = true;
+        console.log(typeof bl); //bool 布尔类型
+
+        var un;
+        console.log(typeof un); //undefined 未定义类型
+
+        var kong = null;
+        console.log(typeof kong); //object 对象
+        // 通过typeof方法可以检测变量的数据类型
+
+        var age = prompt('请输入你得年龄');
+        console.log(typeof age);
+        //通过typeof检测，peompt取得的值，是字符型的。
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

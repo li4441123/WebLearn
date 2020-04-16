@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>禁止右键&&禁止选中文字</title>
+</head>
+
+<body>
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</body>
+<script>
+    var document = document.documentElement;
+
+    //禁用页面右键
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    })
+
+    //禁止选择文字
+    document.addEventListener('selectstart', function (e) {
+        e.preventDefault();
+    })
+</script>
+
+</html>

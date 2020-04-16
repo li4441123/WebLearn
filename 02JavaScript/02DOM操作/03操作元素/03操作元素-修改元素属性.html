@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>操作元素-修改元素属性</title>
+</head>
+
+<body>
+
+<button id="ldh">刘德华</button>
+<button id="zxy">张学友</button>
+<div>
+    <img alt="MPbJ41.png" border="0" src="https://s2.ax1x.com/2019/11/06/MPbJ41.png" title="刘德华"/>
+</div>
+
+</body>
+<script>
+    var ldh = document.querySelector('#ldh');
+    var zxy = document.querySelector('#zxy');
+    var img = document.querySelector('img');
+
+    zxy.onclick = function () {
+        img.src = "https://s2.ax1x.com/2019/11/06/MPbN36.jpg";
+        img.title = "张学友";
+
+    }
+    ldh.onclick = function () {
+        img.src = "https://s2.ax1x.com/2019/11/06/MPbJ41.png";
+        img.title = "刘德华";
+
+    }
+</script>
+
+</html>

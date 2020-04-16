@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>数组转换为字符串</title>
+    <script>
+        // 1.toString(),数组转换为字符串,默认逗号为分隔符
+        var arr = [1, 2, 3, 4];
+        console.log(arr.toString()); //1,2,3,4
+
+
+        // 2.join('分割符'),数组转换为字符串,在括号里输入我们想用的分割符,替换即可
+        console.log(arr.join('|')); //1|2|3|4
+        console.log(arr.join('&')); //1&2&3&4
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

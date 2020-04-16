@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>跟随鼠标运动的天使</title>
+</head>
+<style>
+    img {
+        position: absolute;
+        top: 1px;
+    }
+</style>
+
+<body>
+<img alt="Q8adhV.jpg" border="0" src="https://s2.ax1x.com/2019/12/05/Q8adhV.jpg"/>
+</body>
+<script>
+    var img = document.querySelector('img');
+    // mousemove 鼠标移动事件,每移动1px都会触发事件
+    document.addEventListener('mousemove', function (e) {
+        var x = e.pageX;
+        var y = e.pageY;
+        img.style.top = y - 50 + 'px';
+        img.style.left = x - 50 + 'px';
+
+    })
+</script>
+
+</html>

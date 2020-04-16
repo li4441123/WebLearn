@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>页面加载事件</title>
+</head>
+<script>
+    // 1. 传统注册事件方式, 只有最后一个onload事件生效.
+    window.onload = function () {
+        var btn = document.querySelector('button');
+        btn.onclick = function () {
+            alert('传统注册事件');
+        }
+    }
+
+
+    // 2.监听注册事件,可以写多个load加载事件,都会生效,建议使用监听注册方式.
+    // 3.有了load加载事件,我们可以把js放在页面任意位置,提前加载所有元素
+    window.addEventListener('load', function () {
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            alert('监听注册事件');
+        })
+    })
+
+    // 4. DOMContentLoaded用发和load一样, 不过DOMContentLoaded只提前加载DOM节点, 响应速度更快
+    document.addEventListener('DOMContentLoaded', function () {
+        alert(333);
+    })
+</script>
+
+
+<body>
+<button>hello world</button>
+</body>
+
+</html>

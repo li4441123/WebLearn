@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>简易计算器</title>
+    <script>
+        function jsq() {
+            while (op != 5) {
+                var op = parseFloat(prompt('选择以下任意算数运算：\n' + '1.加法\n' + '2.减法\n' + '3.乘法\n' + '4.除法\n' + '5.退出\n'));
+                if (op >= 5) {
+                    break;
+                }
+                var a = parseFloat(prompt('请输入第一个数字：'));
+                var b = parseFloat(prompt('请输入第二个数字：'));
+                switch (op) {
+                    case 1:
+                        alert(a + b);
+                        break;
+                    case 2:
+                        alert(a - b);
+                        break;
+                    case 3:
+                        alert(a * b);
+                        break;
+                    case 4:
+                        alert(a / b);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+        }
+
+        jsq();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>offsetLeft和offsetTop获取元素偏移</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .father {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 300px;
+    }
+
+    .son {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin: 50px;
+    }
+</style>
+
+<body>
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+<script>
+    // offset 翻译过来就是偏移量，我们使用offset 系列相关属性可以动态的得到该元素的位置（偏移）、大小等。
+    var f = document.querySelector('.father');
+    var s = document.querySelector('.son');
+
+    // 如果父元素没有有定位,则以Body为准,动态获取距离边的值
+    // 1.动态获取距离左边body的值
+    console.log(f.offsetLeft); //300
+    // 2.动态获取距离上边body的值
+    console.log(f.offsetTop); //300
+
+
+    // 如果父元素有定位,则以父元素为准,动态获取距离边的值
+    // 3.返回元素相对带有定位父元素左边框的偏移
+    console.log(s.offsetLeft); //50
+
+    // 4.返回元素相对带有定位父元素上边框的偏移
+    console.log(s.offsetTop); //0
+</script>
+
+</html>

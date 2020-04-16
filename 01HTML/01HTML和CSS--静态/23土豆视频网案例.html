@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        a {
+            display: block;
+            width: 800px;
+            height: 600px;
+            position: relative;
+        }
+
+        .hh {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3) url(./images/bg2.png) no-repeat center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        /*鼠标经过a，.hh出现，运用了后代选择器。因为.hh已经被隐藏，所以只能经过它的父级元素a，才可以显示出它。*/
+        a:hover .hh {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<a href="#">
+    <img alt="" src="./images/dog.jpg">
+    <div class="hh"></div>
+</a>
+</body>
+</html>

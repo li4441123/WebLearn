@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>自增运算符</title>
+    <script>
+        var age = 24;
+        ++age;
+        console.log(age); //25
+        console.log(++age + 10); //36
+        // 1、前置自增运算符，必须配合变量使用,写在变量的前面。等同于：var age = age + 1，优化代码步骤，先加1，在返回值。
+
+
+        var num = 10;
+        console.log(num++ + 1); //先返回的原值，并没有加上
+        console.log(num); //再次输出后，发现后加1.
+
+        // 2、前置自增和后置自增如果单独使用，效果一样
+        // 后置自增： 先返回原值， 后自加1
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

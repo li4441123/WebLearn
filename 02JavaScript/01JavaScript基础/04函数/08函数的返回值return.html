@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>函数的返回值return</title>
+    <script>
+        // 不要在函数内部输出函数结果，用return返回，调用函数的时候再进行输出，此为最佳操作方式
+        function getSum(num1, num2) {
+            return num1 + num2;
+        }
+
+        console.log(getSum(50, 49));
+
+        // 1、正确版本：求两个数的和
+
+        function getSums(star, end) {
+            var sum = 0;
+            for (var i = star; i <= end; i++) {
+                sum += i;
+            }
+            return sum;
+        }
+
+        console.log(getSums(1, 100));
+        // 2、正确版本：求两个数之间所有数的总和
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

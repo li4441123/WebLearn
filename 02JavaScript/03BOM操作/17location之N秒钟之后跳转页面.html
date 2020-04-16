@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>location之N秒钟之后跳转页面</title>
+</head>
+
+<body>
+<button>gogogo</button>
+<div>您将在3秒钟之后跳转页面</div>
+</body>
+<script>
+    var btn = document.querySelector('button');
+    var div = document.querySelector('div');
+    btn.addEventListener('click', function () {
+        var daojishi = setInterval(fnlocation, 3000);
+        var index = 3;
+        fnlocation();
+
+        function fnlocation() {
+            if (index == 0) {
+                location.href = 'http://www.baidu.com';
+            } else {
+                div.innerHTML = '您将在' + index + '秒钟之后跳转页面';
+                index--;
+            }
+
+        }
+    })
+</script>
+
+</html>

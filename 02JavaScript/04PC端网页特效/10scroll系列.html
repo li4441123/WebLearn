@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>scroll系列</title>
+</head>
+
+<body>
+<div style="width: 200px;height: 200px;background-color: pink; overflow: auto;">
+    scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用scroll系列属性作用
+</div>
+</body>
+
+<script>
+    // scroll系列属性作用
+    // element.scrollTop返回被卷去的上侧距离， 返回数值不带单位
+    // element.scrollLeft返回被卷去的左侧距离， 返回数值不带单位
+    // element.scrollWath返回自身实际的宽度， 不含边框， 返回数值不带单位
+    // element.scrollHeight返回自身实际的高度， 不含边框， 返回数值不带单位
+
+    var div = document.querySelector('div');
+    console.log(div.scrollHeight); // 包含文字内容高度,被卷起来的top部分也算,504
+    div.addEventListener('scroll', function () {
+        console.log(this.scrollTop); // 超出部分为304
+
+
+    })
+</script>
+
+</html>

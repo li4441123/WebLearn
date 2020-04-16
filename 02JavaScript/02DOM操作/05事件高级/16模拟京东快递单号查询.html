@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>模拟京东快递单号查询</title>
+</head>
+<style>
+    div {
+        display: none;
+        font-size: 18px;
+        color: #333;
+    }
+
+    div,
+    input {
+        width: 200px;
+        height: 50px;
+        background-color: pink;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+<div></div>
+<input type="text" value="请输入快递单号">
+</body>
+<script>
+    // 执行顺序 : keydown && keypresss > keyup
+    var div = document.querySelector('div');
+    var input = document.querySelector('input');
+    // 1.按键s,自动定位到输入框
+    document.addEventListener('keyup', function (e) {
+        if (e.keyCode == 83) {
+            input.focus();
+        }
+        // 1.如果输入框里面是空的,我们就隐藏 "提示",相反,我们就把值赋给输入框,并且显示
+        if (input.value == '') {
+            div.style.display = 'none';
+        } else {
+            div.innerHTML = input.value;
+            div.style.display = 'block';
+        }
+    })
+
+    // 2. 获得焦点时, 如果输入框有值且值不是 '请输入快递单号', 我们就显示"提示".
+    input.addEventListener('focus', function () {
+        if (input.value && input.value !== '请输入快递单号') {
+            input.value;
+            div.style.display = 'block';
+            // 如果没有值或者值是'请输入快递单号',我们就清空输入框
+        } else {
+            input.value = '';
+            input.style.color = '#666';
+        }
+    })
+
+    // 3.失去焦点,如果输入框没有值,我们就给它赋值'请输入快递单号',并且隐藏"提示"
+    input.addEventListener('blur', function () {
+        if (input.value == '') {
+            input.value = '请输入快递单号';
+            div.style.display = 'none';
+            // 如果有值,我们就直接隐藏"提示"
+        } else {
+            div.style.display = 'none';
+        }
+    })
+</script>
+
+</html>

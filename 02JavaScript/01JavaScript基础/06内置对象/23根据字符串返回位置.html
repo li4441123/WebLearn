@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>根据字符串返回位置</title>
+    <script>
+        // 字符串所有方法,都不会修改字符串本身(字符串的不可变),操作完成后,会返回一个新的字符串
+
+        //字符串对象.根据字符返回位置 str.indexOf('要查找的字符',[起始位置]) , 返回的位置下标号和数组一样,从0开始
+        var str = '改革春风吹满地,中国之春';
+        // console.log(str.indexOf('春', 3)); //11 , 查找'春',从第三个字符开始查找
+
+        // 案例1:
+        var str = 'songhuashan';
+        var index = str.indexOf('s');
+        var num = 0;
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = str.indexOf('s', index + 1);
+        }
+        console.log('s出现了:' + num + '次');
+
+        // 案例2:
+        var arr = ['red', 'blue', 'red', 'pink', 'blue'];
+        var index2 = arr.indexOf('red');
+        var num2 = 0;
+        while (index2 !== -1) {
+            console.log(index2);
+            num2++;
+            index2 = arr.indexOf('red', index2 + 1);
+        }
+        console.log(num + '次');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

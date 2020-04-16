@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>排他思想</title>
+</head>
+
+<body>
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+</body>
+<script>
+    var btn = document.getElementsByTagName('button');
+    // 1.通过for循环,给每个button绑定事件
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].onclick = function () {
+            // 2.每次点击,先清空背景颜色
+            for (var i = 0; i < btn.length; i++) {
+                btn[i].style.backgroundColor = '';
+            }
+            // 3.清空之后,再给它pink颜色
+            this.style.backgroundColor = 'pink';
+        }
+    }
+
+    // 理解:排除其它,设置自己
+</script>
+
+</html>

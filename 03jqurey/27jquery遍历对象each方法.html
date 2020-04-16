@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>jquery遍历对象each方法</title>
+</head>
+
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</body>
+<script src="./res/jquery.min.js"></script>
+<script>
+    $(function () {
+        // 此方法适合遍历标签元素
+        var arr = ['red', 'green', 'blue']
+        $("div").each(function (index, domEle) {
+            // 第一个参数索引号
+            // console.log(index);
+            // 第二个参数DOM对象
+            // console.log(domEle);
+            // 需要把dom对象转换成jq对象，再进行修改操作
+            $(domEle).css('color', arr[index]);
+        })
+
+
+        // 此方法适合遍历数据
+        //元素
+        $.each($('div'), function (i, dom) {
+            console.log(i);
+            console.log(dom);
+
+        })
+
+        // 数组
+        $.each(arr, function (k, v) {
+            console.log(k, v);
+
+        })
+
+        // 对象
+        $.each({
+            a: 1,
+            b: 2,
+            c: 3
+        }, function (k, v) {
+            console.log(k, v);
+
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>04移动端拖动元素</title>
+</head>
+<style>
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<div></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    var startX = 0;
+    var startY = 0;
+    var X = 0;
+    var Y = 0;
+    div.addEventListener('touchstart', function (e) {
+        // 1.获取一开始触摸元素时的坐标
+        startX = e.targetTouches[0].pageX;
+        startY = e.targetTouches[0].pageY;
+        // 获取元素到屏幕边缘的距离
+        X = this.offsetLeft;
+        Y = this.offsetTop;
+    })
+
+    div.addEventListener('touchmove', function (e) {
+        // 2. 利用移动后触摸元素坐标 - 初始触摸元素的坐标 = 移动的距离。 得到了移动的距离
+        var moveX = e.targetTouches[0].pageX - startX;
+        var moveY = e.targetTouches[0].pageY - startY;
+        // 3. 屏幕离元素的距离 + 移动的距离 = 盒子移动的位置
+        this.style.left = X + moveX + 'px';
+        this.style.top = Y + moveY + 'px';
+        e.preventDefault();
+    })
+</script>
+
+</html>

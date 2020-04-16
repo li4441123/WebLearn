@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>判断成绩案例</title>
+    <script>
+        var fraction = prompt('请输入您的分数：');
+        if (fraction >= 90 && fraction <= 100) {
+            alert('您的成绩是：A')
+        } else if (fraction >= 80 && fraction < 90) {
+            alert('您的成绩是：B')
+        } else if (fraction >= 70 && fraction < 80) {
+            alert('您的成绩是：C')
+        } else if (fraction >= 60 && fraction < 70) {
+            alert('您的成绩是：D')
+        } else if (fraction < 60 && fraction >= 0) {
+            alert('您的成绩是：E')
+        } else {
+            alert('请您重新输入')
+        }
+        //按照从大到小的顺序写，&& 之后的条件可以去掉。js代码是逐行解释。
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

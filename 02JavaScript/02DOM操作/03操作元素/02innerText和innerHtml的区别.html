@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>innerText和innerHtml的区别</title>
+</head>
+
+<body>
+<p>测试</p>
+<!-- <h1></h1> -->
+</body>
+<script>
+    // innerText和innerHtml的区别
+    // 1.innerText清除格式,不解析HTML标签
+    var p = document.querySelector('p');
+    p.innerText = 1;
+
+    // 2. innerHtml解析HTML标签,保留所有格式
+    // 误区:以为只可以改变父元素里的内容,这个内容也包含拼接的html代码.
+    var html = '<h1>' + 123 + '</h1>'
+    p.innerHTML = html;
+</script>
+
+</html>

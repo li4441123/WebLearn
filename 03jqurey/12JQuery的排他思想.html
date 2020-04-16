@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery的排他思想</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<body>
+<button>牛逼</button>
+<button>牛逼</button>
+<button>牛逼</button>
+<button>牛逼</button>
+<button>牛逼</button>
+</body>
+<script>
+    $(function () {
+        $('button').click(function () {
+            $(this).css('background', 'red');
+            $(this).siblings('button').css('background', '');
+        })
+    })
+</script>
+
+</html>

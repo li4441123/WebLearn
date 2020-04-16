@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>new的执行过程</title>
+    <script>
+        function Star(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.fn = function (sing) {
+                console.log(sing);
+
+            }
+        }
+
+        var zgr = new Star('张国荣', 50, '男');
+        zgr.fn('风往北吹');
+        // new关键字执行过程：
+        // 1、new 构造函数是在内存中创建了一个空的对象
+        // 2、this 就会指向刚才创建的空对象
+        // 3、开始执行构造函数得代码，给空对象添加属性和方法
+        // 4、返回这个对象
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

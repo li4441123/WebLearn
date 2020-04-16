@@ -1,0 +1,45 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-05 10:28:13
+ * @LastEditTime: 2019-11-05 10:49:41
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \HTML-CSS-JS\02JavaScript\01JavaScript基础\06内置对象\28替换字符串及转换为数组.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>替换字符串及转换为数组</title>
+    <script>
+        // 1. realace('被替换的字符串', '替换为的字符串'), 它只会替换首个字符串, 后面相同的不替换.
+        var str = 'songshan';
+        console.log(str.replace('s', 't'));
+
+
+        // 2. 有一个字符串为 'songsongsongsongsongsong', 要求把里面的所有的s, 替换为t
+        // 适用于敏感词替换
+        var str1 = 'songsongsongsongsongsong';
+        while (str1.indexOf('s') !== -1) { //重要条件,只要str1.indexOf('s') !== -1(只要这个里还有s),这个循环就会一直进行下去
+            str1 = str1.replace('s', 't'); //执行过程,把第一个s替换成了t,以后保存到一个新变量当中,在继续循环到下个s
+        }
+        console.log(str1);
+
+        // 3.字符串转换为数组,split('分割符'),这里面的分割符不是自己随意取的,而是取决于我们要转换的字符串的分割符
+        //字符串一定要是隔开的,不然无法进行分割,会识别成为一个数组元素
+        var str2 = 'song,hua,shan';
+        console.log(str2.split(',')); //返回数组且最后的分割符都是逗号
+
+        var str3 = '宋&华&山';
+        console.log(str3.split('&')); //返回数组且最后的分割符都是逗号
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

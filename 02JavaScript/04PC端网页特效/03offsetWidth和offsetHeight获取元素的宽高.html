@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>offsetWidth和offsetHeight获取元素的宽高</title>
+</head>
+<style>
+    .f {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 50px;
+        padding: 50px;
+        border: 15px solid red;
+    }
+</style>
+
+<body>
+<div class="f">
+    <div class="s"></div>
+</div>
+</body>
+<script>
+    var f = document.querySelector('.f');
+    var s = document.querySelector('.s');
+    // 1.ele.offsetWidth 返回的是 width + padding + border 加起来的宽高
+    console.log(f.offsetWidth); // 宽
+    console.log(f.offsetHeight); // 高
+
+
+    // 2.offsetParent和parentNode的区别
+    console.log(s.offsetParent); // 返回的是离自己最近的、带定位的父级元素，如果都没有返回body
+    console.log(s.parentNode); // 返回的是父级DOM元素
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>密码框验证信息</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .reg {
+        display: flex;
+        justify-content: center;
+    }
+
+    .mes {
+        color: #999;
+    }
+</style>
+
+<body>
+<div class="reg">
+    <input type="pwd">
+    <p class="mes">请输入6-16位密码</p>
+</div>
+</body>
+<script>
+    var pwd = document.querySelector('input');
+    var mes = document.querySelector('.mes');
+
+    pwd.onblur = function () {
+        if (pwd.value.length < 6 || pwd.value.length > 16) {
+            mes.style.color = 'red';
+            mes.innerHTML = '输入不正确,请重新输入6-16位密码';
+        } else {
+            mes.style.color = 'green';
+            mes.innerHTML = '密码输入正确';
+        }
+    }
+</script>
+
+</html>

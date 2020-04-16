@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>注册事件的两种方式</title>
+</head>
+
+<body>
+<button>传统注册事件</button>
+<button>监听注册事件</button>
+<button>IE9之前的方式</button>
+</body>
+<script>
+    var btn = document.querySelectorAll('button');
+    // 1.传统注册事件\绑定事件 , 兼容性好
+    btn[0].onclick = function () {
+        alert(11);
+    }
+
+    btn[0].onclick = function () {
+        alert(22);
+    }
+
+    // 2.监听注册事件\绑定事件
+    btn[1].addEventListener('click', function () {
+        alert(333);
+    })
+
+    btn[1].addEventListener('click', function () {
+        alert(444);
+    })
+
+    // 3.仅支持IE9之前的浏览器(了解)
+    btn[2].attachEvent('onclick', function () {
+        alert('IE9之前版本浏览器');
+    })
+</script>
+
+</html>

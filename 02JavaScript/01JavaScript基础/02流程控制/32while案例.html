@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>while案例</title>
+    <script>
+        var num = 0;
+        while (num <= 100) {
+            console.log('我今年' + num + '岁');
+            num++;
+        }
+        // 案例一：打印1-100岁
+
+
+        var i = 0;
+        var j = 0;
+        while (i <= 100) {
+            j = j + i;
+            i++;
+        }
+        console.log(j);
+        //案例二：求1-100之间的和
+
+        var love = prompt('你爱我吗？');
+        while (love !== '我爱你') {
+            love = prompt('你爱我吗？');
+        }
+        alert('我也爱你');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

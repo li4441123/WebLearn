@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>定时器之setInterval</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // setInterval使用方式和setTimeout相同
+    // 1. 但是setInterval是循环调用, 定时器毫秒数一到, 就会执行一次, 循环执行。
+    // 2.setTimeout只执行一次，毫秒数到了，执行一次，就结束了。
+    setInterval(function () {
+        console.log('循环调用');
+
+    }, 1000);
+</script>
+
+</html>

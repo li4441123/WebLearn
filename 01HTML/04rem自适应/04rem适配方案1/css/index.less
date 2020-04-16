@@ -1,0 +1,104 @@
+@import "common";
+
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+}
+
+@font: 50;
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: 88rem / @font;
+  background-color: #ffc001;
+
+  .left {
+    width: 44rem / @font;
+    height: 70rem / @font;
+    margin: 11rem / @font 25rem / @font 7rem / @font 24rem / @font;
+    background: url(../images/classify.png) no-repeat;
+    background-size: 44rem / @font 70rem / @font;
+  }
+
+  .saer {
+    flex: 1;
+
+    input {
+      outline: none;
+      width: 100%;
+      height: 66rem / @font;
+      border-radius: 33rem / @font;
+      border: 0;
+      margin-top: 12rem / @font;
+      font-size: 25rem / @font;
+      color: #757575;
+      padding-left: 55rem / @font;
+      background-color: #fff2cc;
+    }
+  }
+
+  .right {
+    text-decoration: none;
+    width: 75rem / @font;
+    height: 70rem / @font;
+    line-height: 70rem / @font;
+    margin: 10rem / @font;
+    font-size: 25rem  / @font;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.banner {
+  width: 750rem / @font;
+  height: 368rem / @font;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.ad {
+  display: flex;
+
+  a {
+    flex: 1;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+nav {
+  width: 750rem / @font;
+
+  a {
+    width: 150rem / @font;
+    height: 140rem / @font;
+    float: left;
+    text-align: center;
+    margin-top: 10rem / @font;
+
+    img {
+      display: block;
+      width: 82rem / @font;
+      height: 82rem / @font;
+      margin: 10rem / @font auto 0;
+    }
+
+    span {
+      font-size: 25rem / @font;
+      color: #333;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>动态生成表格</title>
+</head>
+<style>
+    table {
+        width: 500px;
+        margin-top: 200px;
+    }
+
+    thead > tr {
+        background-color: #888;
+    }
+
+    tr {
+        text-align: center;
+    }
+
+    td {
+        border: 1px solid #777;
+        border-top: 0;
+    }
+</style>
+
+<body>
+<table align="center" cellpadding="0" cellspacing="0">
+    <thead>
+    <tr>
+        <td>姓名</td>
+        <td>学科</td>
+        <td>分数</td>
+        <td>操作</td>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+</table>
+
+</body>
+<script>
+    var data = [{
+        name: '张三',
+        sou: 'java',
+        fs: 99
+    }, {
+        name: '李四',
+        sou: 'java',
+        fs: 95
+    }, {
+        name: '王五',
+        sou: 'java',
+        fs: 89
+    }, {
+        name: '王五',
+        sou: 'java',
+        fs: 89
+    }]
+    // console.log(data);
+
+    var tbody = document.querySelector('tbody');
+    for (var i = 0; i < data.length; i++) {
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+        for (var k in data[i]) {
+            var td = document.createElement('td');
+            td.innerHTML = data[i][k];
+            tr.appendChild(td);
+        }
+
+        var td = document.createElement('td');
+        td.innerHTML = '<a href="javascript:;">删除</a>';
+        tr.appendChild(td);
+    }
+
+    var a = document.querySelectorAll('a');
+    for (var i = 0; i < a.length; i++) {
+        a[i].onclick = function () {
+            tbody.removeChild(this.parentNode.parentNode);
+        }
+    }
+</script>
+
+</html>

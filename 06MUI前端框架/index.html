@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="width=device-width" name="viewport"/>
+    <title>Index</title>
+    <link href="./css/mui.min.css" rel="stylesheet"/>
+    <script src="./js/mui.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+<body>
+<!--下拉刷新容器-->
+<div class="mui-content mui-scroll-wrapper" id="refreshContainer">
+    <div class="mui-scroll">
+        <!--数据列表-->
+        <ul class="mui-table-view mui-table-view-chevron" id="testUl">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    var countDown = 0; //下拉次数
+    var countUp = 0; //上拉次数
+    mui.init({
+        pullRefresh: {
+            container: "#refreshContainer", //待刷新区域标识，querySelector能定位的css选择器均可，比如：id、.class等
+            down: { //下拉刷新
+                height: 50, //可选,默认50.触发下拉刷新拖动距离,
+                auto: false, //可选,默认false.首次加载自动下拉刷新一次
+                contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+                contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+                contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+                callback: async function () { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+                    if (countDown >= 3) {
+                        mui.toast("没有更多数据了");
+                        //没有数据
+                        mui('#refreshContainer').pullRefresh().endPulldownToRefresh(true);
+                        return;
+                    }
+                    //模拟向服务器获取数据的等待时间
+                    await sleep(1000);
+                    ///*每次加载动态的添加一个li*/
+                    $("#testUl li:first").before($("<li>" + new Date() + "</li>"));
+                    mui.toast("更新了一条数据");
+                    ////没有更多内容了，endPulldown 传入true， 不再执行下拉刷新
+                    mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+                    countDown++;
+                }
+            },
+            up: { //上拉加载
+                height: 50, //可选.默认50.触发上拉加载拖动距离
+                auto: false, //可选,默认false.自动上拉加载一次
+                contentrefresh: "正在加载...", //可选，正在加载状态时，上拉加载控件上显示的标题内容
+                contentnomore: '没有更多数据了', //可选，请求完毕若没有更多数据时显示的提醒内容；
+                callback: async function () { //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+                    if (countUp >= 3) {
+                        this.endPullupToRefresh(true); //没有数据
+                        return;
+                    }
+                    await sleep(1000);
+                    /*每次加载动态的添加一个li*/
+                    $("#testUl").append($("<li>" + new Date() + "</li>"));
+                    this.endPullupToRefresh(false)
+                    countUp++;
+                }
+            }
+        }
+    });
+
+    //模拟线程等待,ms:单位毫秒
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+
+</script>

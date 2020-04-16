@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>停止定时器的方法</title>
+</head>
+
+<body>
+<button>停止计时器</button>
+</body>
+<script>
+    // 1.创建定时器
+    var time = setTimeout(function () {
+        console.log('没停止');
+    }, 5000)
+
+    var btn = document.querySelector('button');
+    // 2.点击按钮清楚定时器
+    btn.addEventListener('click', function () {
+        clearTimeout(time); // 清除定时器方法
+    })
+</script>
+
+</html>

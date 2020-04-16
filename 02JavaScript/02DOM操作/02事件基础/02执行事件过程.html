@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>执行事件过程</title>
+</head>
+
+<body>
+<button id="button">div</button>
+</body>
+<script>
+    // 执行事件的步骤:
+    // 1. 获取事件源
+    // 2. 注册事件（ 绑定事件）
+    // 3. 添加事件处理程序（ 采取函数赋值形式）
+
+
+    // 案例:
+    // 1.获取事件源
+    var button = document.getElementById('button');
+    // 2.注册事件\绑定事件
+    button.onclick = function () {
+        console.log('我被选中了'); //3.添加事件处理程序
+    }
+</script>
+
+</html>

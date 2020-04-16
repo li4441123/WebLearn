@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery的滑动效果以及事件切换</title>
+</head>
+<style>
+    div {
+        /* width: 200px; */
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<button>切换</button>
+<div></div>
+</body>
+<script src="./res/jquery.min.js"></script>
+<script>
+    // 事件切换 hover（鼠标经过和鼠标离开）
+    $(function () {
+        $('button').eq(0).hover(function () {
+            $('div').slideToggle();
+        })
+    })
+</script>
+
+</html>

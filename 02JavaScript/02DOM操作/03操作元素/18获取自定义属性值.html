@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>获取自定义属性值</title>
+</head>
+
+<body>
+<div id="1" index="2"></div>
+</body>
+<script>
+    var div = document.querySelector('div');
+
+    // 1.获取内置属性值, element.属性名
+    console.log(div.id); //1
+
+
+    // 2. 获取程序员自定义属性值, element.getAttribute('自定义属性名')
+    console.log(div.getAttribute('index')); //2
+</script>
+
+</html>

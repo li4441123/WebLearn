@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery得显示隐藏与切换</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<button>显示</button>
+<button>隐藏</button>
+<button>切换</button>
+<div></div>
+</body>
+<script src="./res/jquery.js"></script>
+<script>
+    $(function () {
+        // 显示
+        $('button').eq(0).click(function () {
+            $('div').show();
+        })
+
+        // 隐藏
+        $('button').eq(1).click(function () {
+            $('div').hide();
+        })
+
+        // 切换
+        $('button').eq(2).click(function () {
+            $('div').toggle(1000);
+        })
+    })
+</script>
+
+</html>

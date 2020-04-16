@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>节点操作之第一个元素和最后一个元素</title>
+</head>
+
+<body>
+<ul>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+</ul>
+</body>
+<script>
+    var ul = document.querySelector('ul');
+
+    // 1.firstChild  和  lastChild 获取第一个子节点和最后一个子节点，不管是文本节点还是元素节点
+    console.log(ul.firstChild);
+    console.log(ul.lastChild);
+
+    // 2. firstElementChild 和 lastElementChild 获取第一个子元素。 但是有兼容性问题， IE9以上才支持
+    console.log(ul.firstElementChild);
+    console.log(ul.lastElementChild);
+
+    // 3.实际开发使用方法，没有兼容性问题，又能获得第一个和最后一个元素
+    console.log(ul.children[0]);
+    console.log(ul.children[ul.children.length - 1]);
+</script>
+
+</html>

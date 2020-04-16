@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
+    <title>bootstrap响应式工具</title>
+    <style>
+        .row div {
+            height: 200px;
+            background-color: pink;
+        }
+
+        .row div:nth-child(3) {
+            background-color: #333;
+        }
+
+        span {
+            color: azure;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <!-- 隐藏：hidden-xs(超小屏)、hidden-sm(小屏)、hidden-md(中屏)、hidden-lg(大屏) -->
+    <!-- 显示：visible-xs(超小屏)、visible-sm(小屏)、visible-md(中屏)、visible-lg(大屏) -->
+    <div class="row">
+        <div class="col-xs-3">
+            <span class="visible-lg">只有大屏才能看见我</span>
+        </div>
+        <div class="col-xs-3"></div>
+        <div class="col-xs-3 hidden-md hidden-xs"></div>
+        <div class="col-xs-3"></div>
+    </div>
+</div>
+
+</body>
+
+</html>

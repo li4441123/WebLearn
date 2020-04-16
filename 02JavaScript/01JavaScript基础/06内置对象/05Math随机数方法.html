@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Math随机数方法</title>
+    <script>
+        // 在0 - 1之间随机取数，但不包括1 , 大于等于0 且 小于1
+        console.log(Math.random());
+
+
+        // 随机取整数的函数，包含最小数和最大数
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+
+        //随机整数函数
+        console.log(getRandomInt(1, 9));
+
+
+        //例子：通过给数组下标随机数，随机取到数组不同的元素
+        var arr = ['肖战', '陈令情', '电视剧', 2019, '宋华山'];
+        console.log(arr[getRandomInt(0, arr.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

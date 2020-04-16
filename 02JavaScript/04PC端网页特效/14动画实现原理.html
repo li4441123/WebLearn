@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>动画实现原理</title>
+</head>
+
+<body>
+<div style="width: 200px;height: 200px;background-color: pink;position: absolute;top: 0;left: 0;"></div>
+</body>
+<script>
+    //动画原理
+    //1.获得盒子当前位置
+    //2.让盒子在当前位置加上1个移动距离
+    //3.利用定时器不断重复这个操作
+    //4.加一个结束定时器的条件
+    //5.注意此元素需要添加定位，才能使用element.style.1eft
+    var div = document.querySelector('div');
+
+    var time = setInterval(function () {
+        if (div.offsetLeft >= 450) {
+            clearInterval(time);
+        } else {
+            div.style.left = div.offsetLeft + 1 + 'px';
+            div.style.top = div.offsetTop + 1 + 'px';
+        }
+    }, 20)
+</script>
+
+</html>

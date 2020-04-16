@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-01 10:42:32
+ * @LastEditTime: 2019-11-01 11:17:42
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \HTML-CSS-JS\02JavaScript\01JavaScript基础\06内置对象\24求某个字符串出现的位置和次数.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>求某个字符串出现的位置和次数</title>
+    <script>
+        /**
+         * @description: 封装函数:求某个字符串\数组元素出现的位置和次数
+         * @param {arr,arrc}
+         * @return: 出现的次数
+         */
+        function getGpsNum(arr, arrc) {
+            var index = arr.indexOf(arrc);
+            var num = 0;
+            while (index !== -1) {
+                console.log(index);
+                num++;
+                index = arr.indexOf(arrc, index + 1);
+            }
+            // console.log(arrc + '出现的次数为:' + num + '次');
+            return arrc + '出现的次数为:' + num + '次';
+        }
+
+        //字符串查询结果
+        var name = 'songhuashans';
+        var str = getGpsNum(name, 's');
+        console.log(str);
+
+        //数组查询结果
+        var color = ['red', 'blue', 'red', 'pink', 'red'];
+        var arr = getGpsNum(color, 'red');
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

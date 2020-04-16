@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Math的绝对值和三个取整方法</title>
+    <script>
+        //1、绝对值方法
+        console.log(Math.abs(1)); //绝对值为1
+        console.log(Math.abs(-1)); //绝对值为1
+        console.log(Math.abs('1')); // 隐式转换，会把字符串型的1，转换成数字型的1
+
+
+        //2、三个取整方法
+        console.log(Math.floor(1.1)); // 1
+        console.log(Math.floor(1.9)); // 1
+        // （1）Math.floor : 向下取整，往小了取
+
+        console.log(Math.ceil(1.1)); //2
+        console.log(Math.ceil(1.5)); //2
+        // （2）Math.ceil : 向上取整，往大了取
+
+        console.log(Math.round(1.1)); //1
+        console.log(Math.round(1.5)); //2
+        console.log(Math.round(-1.1)); //-1
+        console.log(Math.round(-1.5)); //-1
+        // （2）Math.round : 四舍五入,0.5特殊，往大了取
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

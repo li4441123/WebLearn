@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*        z-index: 2; 只适用于固定定位、绝对定位、相对定位，不适用于其它情况。*/
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+        }
+
+        .a {
+            z-index: 2;
+        }
+
+        .b {
+            background-color: aqua;
+            top: 20px;
+            left: 20px;
+            z-index: 3;
+        }
+
+        .c {
+            background-color: blue;
+            top: 30px;
+            left: 30px;
+            /*            z-index: 4;*/
+        }
+    </style>
+</head>
+<script src="./script/echarts.js"></script>
+<body>
+<div class="a"></div>
+<div class="b"></div>
+<div class="c"></div>
+</body>
+</html>

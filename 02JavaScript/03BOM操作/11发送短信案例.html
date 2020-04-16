@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>发送短信案例</title>
+</head>
+
+<body>
+<input type="text">
+<button>发送</button>
+</body>
+<script>
+    var btn = document.querySelector('button');
+    var index = 3;
+
+    // 1. 注册点击事件
+    btn.addEventListener('click', function () {
+        // 2.按钮被点击之后,不能再点
+        this.disabled = true;
+        // 3.定时器,倒计时
+        var time = setInterval(function () {
+            if (index == 0) {
+                //恢复原样
+                clearInterval(time); // 清除倒计时
+                btn.disabled = false;
+                btn.innerHTML = '提交';
+                index = 3;
+            } else {
+                btn.innerHTML = '您还剩' + index + '秒';
+                index--;
+            }
+        }, 1000)
+    })
+
+
+    // 练习测试
+    var btn = document.querySelector('button');
+    var index = 3;
+
+    btn.addEventListener('click', function () {
+        this.disabled = true;
+        var time = setInterval(daojishi, 1000);
+
+        function daojishi() {
+            if (index == 0) {
+                clearInterval(time);
+                btn.disabled = false;
+                btn.innerHTML = '发送';
+                index = 3;
+            } else {
+                btn.innerHTML = '您还剩' + index + '秒钟';
+                index--;
+            }
+
+        }
+    })
+</script>
+
+</html>

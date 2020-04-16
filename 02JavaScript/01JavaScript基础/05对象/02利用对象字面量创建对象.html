@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>利用对象字面量创建对象</title>
+    <script>
+        // var obj = {}; //创建了一个空对象
+        var obj = {
+            uname: 'song',
+            age: 24,
+            sex: 'man',
+            hello: function () {
+                console.log('hello,world');
+            }
+        }
+        // console.log(obj);
+
+        console.log(obj.uname); //调用对象内的属性
+        console.log(obj['age']); //调用对象内的属性
+        obj.hello(); //调用对象内的方法（函数）
+
+        // 1、属性：键：值
+        // 2、多个属性或者方法用逗号分隔
+        // 3、方法冒号后面跟的是一个匿名函数
+
+        //利用字面量创建对象
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

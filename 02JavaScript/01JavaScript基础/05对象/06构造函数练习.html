@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>构造函数练习</title>
+    <script>
+        function Hero(name, type, blood) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function (attack) {
+                console.log(attack);
+            }
+        }
+
+        //构造函数
+
+        var lianpo = new Hero('廉颇', '力量型', 500);
+        console.log(lianpo.name);
+        console.log(lianpo.type);
+        console.log(lianpo.blood);
+        lianpo.attack('近战');
+        //廉颇
+
+        var houyi = new Hero('后羿', '射手', 100);
+        console.log(houyi.name);
+        console.log(houyi.type);
+        console.log(houyi.blood);
+        houyi.attack('远程');
+        //后羿
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

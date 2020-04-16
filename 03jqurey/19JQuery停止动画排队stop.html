@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery停止动画排队stop</title>
+</head>
+<style>
+    div {
+        /* width: 200px; */
+        height: 200px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+<button>切换</button>
+<div></div>
+</body>
+<script src="./res/jquery.min.js"></script>
+<script>
+    // stop方法写在动画函数的前面
+    // 作用：防止多次触发动画效果，防抖，节流（重要）
+    $(function () {
+        $('button').eq(0).hover(function () {
+            $('div').stop().slideToggle();
+        })
+    })
+</script>
+
+</html>

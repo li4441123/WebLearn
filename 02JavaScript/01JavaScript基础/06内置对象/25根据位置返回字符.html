@@ -1,0 +1,37 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-04 14:27:47
+ * @LastEditTime: 2019-11-05 11:30:57
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \HTML-CSS-JS\02JavaScript\01JavaScript基础\06内置对象\25根据位置返回字符.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>根据位置返回字符</title>
+    <script>
+        // 1.根据位置返回字符,ste.charAt(下标号)
+        var str = 'song';
+        // console.log(str.charAt(0));
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+
+        // 2.charCodeAt(index),返回响应索引号的字符ASCII值,目的:判断用户按下了哪个键
+        console.log(str.charCodeAt(0));
+
+        // 3.str[index]H5新增,考虑兼容性
+        console.log(str[0]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

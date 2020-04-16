@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .father {
+        position: relative;
+    }
+
+    .right {
+        width: 60px;
+        height: 80px;
+        background-color: red;
+        text-align: center;
+        line-height: 80px;
+        font-size: 12px;
+        position: absolute;
+        top: 600px;
+        right: 0;
+    }
+
+    .right > span {
+        display: none;
+    }
+
+    .header,
+    .nav,
+    .banner,
+    .foot {
+        width: 90%;
+        height: 500px;
+        line-height: 400px;
+        text-align: center;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+<div class="father">
+    <div class="right">
+        <span>返回顶部</span>
+    </div>
+    <div class="header" style="background-color: pink;">header</div>
+    <div class="nav" style="background-color: greenyellow;">nav</div>
+    <div class="banner" style="background-color: royalblue;">banner</div>
+    <div class="foot" style="background-color: orange; height: 800px;">foot</div>
+</div>
+</body>
+<script>
+    var right = document.querySelector('.right');
+    var nav = document.querySelector('.nav');
+    var banner = document.querySelector('.banner');
+    var psTop = right.offsetTop - nav.offsetTop;
+
+    document.addEventListener('scroll', function () {
+        if (window.pageYOffset > nav.offsetTop) {
+            right.style.position = 'fixed';
+            right.style.top = psTop + 'px';
+        } else {
+            right.style.position = 'absolute';
+            right.style.top = '600px';
+
+        }
+
+        if (window.pageYOffset > banner.offsetTop) {
+            right.children[0].style.display = 'block';
+        } else {
+            right.children[0].style.display = 'none';
+
+        }
+
+    })
+</script>
+
+</html>

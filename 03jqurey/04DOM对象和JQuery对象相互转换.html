@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>DOM对象和JQuery对象相互转换</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- 谷歌浏览器把自动播放禁止了，加上muted静音，解除限制 -->
+<video muted src="./res/shbk.mp4"></video>
+</body>
+
+<script>
+    // 1.有时DOM对象和JQ对象之间需要转换，因为有些函数JQ里没有封装，需要用到原生。
+    // 2.通过给JQuery对象后面加索引号[0] 或者get() 的方式， 把JQ对象转换成DOM对象， 就可以正常使用原生js函数了
+    // 3.DOM转换JQ（暂时没有提到）
+
+    // (1) 方法一
+    $('video')[0].play();
+
+    // (2) 方法二
+    $('video').get(0).play();
+</script>
+
+</html>

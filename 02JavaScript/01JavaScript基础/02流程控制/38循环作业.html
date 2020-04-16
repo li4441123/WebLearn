@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>循环作业</title>
+    <script>
+        var sum = 0;
+        var pj = 100;
+        for (var i = 1; i <= 100; i++) {
+            sum = sum + i;
+        }
+        console.log(sum);
+        console.log(sum / pj);
+        // 1、 求1 - 100 所有数得总和， 还有平均值
+
+        var ou = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                ou = ou + i;
+            }
+        }
+        console.log(ou);
+        // 2、求1-100所有偶数得总和
+
+        var multiple = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                multiple = multiple + i;
+            }
+        }
+        console.log(multiple);
+        // 3、求100以内7的倍数的总和
+
+        var str = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= 5; j++) {
+                str = str + '❤';
+            }
+            str = str + '\n';
+        }
+        console.log(str);
+        // 4、打印5行5列字符串
+
+        var str2 = '';
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                str2 = str2 + '❤';
+            }
+            str2 = str2 + '\n';
+        }
+        console.log(str2);
+        // 5、打印正三角形
+
+        var num = 0;
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                num = num + j + '×' + i + '=' + j * i + '\t';
+            }
+            num = num + '\n';
+        }
+        console.log(num);
+        // 6、打印九九乘法口诀
+
+        var myname = prompt('请您输入用户名：');
+        var pwd = prompt('请您输入密码：');
+        while (myname !== 'admin' && pwd !== 123456) {
+            var myname = prompt('请您输入用户名：');
+            var pwd = prompt('请您输入密码：');
+        }
+        alert('登录成功');
+        // 7、 判断密码是否输入正确， 如果不正确， 重新输入， 直到输入正确， 弹出成功登录提示
+
+        var sum2 = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 10 == 3) {
+                continue;
+            }
+            sum2 = sum2 + i;
+        }
+        console.log(sum2);
+        // 8、 求1 - 100 的总和， 跳过个位数为3的数【 用contnue】
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

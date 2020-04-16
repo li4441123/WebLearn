@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>冒泡排序练习</title>\
+    <script>
+        var arr = [9, 8, 7, 5, 6, 4, 1, 2, 3];
+        for (var i = 0; i <= arr.length - 1; i++) {
+            for (var j = 0; j <= arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+        //循环效率高
+
+
+        var arr = [9, 8, 7, 5, 6, 4, 1, 2, 3];
+        for (var i = 0; i <= arr.length; i++) {
+            for (var j = i + 1; j <= arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    var temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        console.log(arr);
+        //循环效率不高
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>格式化日期时分秒</title>
+
+</head>
+
+<body>
+<div class="time"></div>
+</body>
+<script>
+    // 使用前, new一下
+    var Date = new Date();
+
+    var h = Date.getHours(); //时
+    var m = Date.getMinutes(); //分
+    var s = Date.getSeconds(); //秒
+
+    //输出当前时间(字符串拼接)
+    console.log('现在时间:' + h + '时' + m + '分' + s + '秒');
+
+
+    //封装一个时分秒的函数  格式:08:08:00
+    function getTimer() {
+        var time = new Date();
+        var h = time.getHours(); //时
+        h = h < 10 ? '0' + h : h; //小于10补0
+        var m = time.getMinutes(); //分
+        m = m < 10 ? '0' + m : m; //小于10补0
+        var s = time.getSeconds(); //秒
+        s = s < 10 ? '0' + s : s; //小于10补0
+        return h + ':' + m + ':' + s;
+    }
+
+    var time = document.querySelector('.time');
+    var html =
+        time.innerHTML = getTimer();
+    // console.log(getTimer());
+</script>
+
+</html>

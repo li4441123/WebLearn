@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>节点操作之子节点</title>
+</head>
+
+<body>
+<ul>
+    <li>子节点</li>
+    <li>子节点</li>
+    <li>子节点</li>
+    <li>子1节点</li>
+    <li>子节点</li>
+</ul>
+
+<ol>
+    <li>子节点</li>
+    <li>子节点</li>
+    <li>子节点</li>
+    <li>子节点</li>
+    <li>子节点</li>
+</ol>
+</body>
+<script>
+    // 1.获取ul元素
+    var ul = document.querySelector('ul');
+
+    // 2. 获取ul的子元素： childNodes,但是包含了文本和元素，不推荐使用，需要专门处理其中的数据
+    console.log(ul.childNodes);
+
+    // 3.获取ul的子元素：children，只获取元素，不获取其它类型，非标准，但大多浏览器都支持，实际开发常用的 ****
+    console.log(ul.children);
+</script>
+
+</html>

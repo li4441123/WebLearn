@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>简单数据类型-数字型</title>
+    <script>
+        var N1 = 15;
+        var N2 = 15.1;
+        // 1、整型和浮点型再JS中都被称为数字型
+
+        var number = 010;
+        console.log(number);
+        // 2、八进制 0 - 7 ，程序里面数字前面j加0，表示八进制
+
+        var number2 = 0x9;
+        console.log(number2);
+        // 3、十六进制 0-9 a-f , 数字前面加0x表示十六进制
+
+        alert(Number.MAX_VALUE); //1.7976931348623157e+308 
+        alert(Number.MIN_VALUE); //5e-324
+        console.log(Number.MAX_VALUE); //1.7976931348623157e+308
+        console.log(Number.MIN_VALUE); //5e-324
+        // 4、JS中数值得最大值和最小值, 最大值：1.7976931348623157e+308 ； 最小值：5e-324
+
+        console.log(Number.MAX_VALUE * 2); //Infinity 无穷大
+        console.log(-Number.MAX_VALUE * 2); // -Infinity 无穷小
+        console.log('S' - 500); //非数字
+        //5、JS中得三个特殊值，Infinity 无穷大、-Infinity 无穷小、NaN非数字
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

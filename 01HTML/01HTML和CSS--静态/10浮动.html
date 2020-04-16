@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <!-- 浮动的盒子,默认转换为行内块模式 -->
+    <!-- 浮动的目的就是为了让多个块状元素同一行显示.最核心的关键就是,怎么排列是否占有位置. -->
+    <style media="screen">
+        .e {
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+
+        .a {
+            background-color: #71c451;
+        }
+
+        .b {
+            background-color: #f2cb26;
+        }
+
+        .c {
+
+            background-color: rgb(249, 24, 199);
+        }
+
+        .d {
+            float: right;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(15, 245, 190);
+        }
+    </style>
+</head>
+<body>
+<div class="e a"></div>
+<div class="e b"></div>
+<div class="e c"></div>
+<div class="d"></div>
+</body>
+</html>

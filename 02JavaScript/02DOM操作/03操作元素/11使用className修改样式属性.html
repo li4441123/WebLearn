@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>使用className修改样式属性</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background: #000;
+    }
+
+    .gaibian {
+        /* 提前写好的css样式 */
+        width: 200px;
+        height: 200px;
+        background: red;
+        margin-top: 100px;
+    }
+</style>
+
+<body>
+<div class="first">你好</div>
+</body>
+
+
+<script>
+    var div = document.querySelector('div');
+    div.onclick = function () {
+        // className使用方法:提前写好css样式,在这里直接调用
+        // 样式较多时使用className,较少时使用style
+        div.className = 'gaibian'; //默认覆盖原先的类
+        //利用多类名,把原先的类名,写进去
+        div.className = 'first gaibian';
+
+    }
+</script>
+
+</html>

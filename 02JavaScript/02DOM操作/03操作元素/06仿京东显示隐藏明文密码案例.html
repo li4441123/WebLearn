@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>仿京东显示隐藏明文密码案例</title>
+</head>
+
+<body>
+<button>显示/隐藏</button>
+<input type="password">
+</body>
+<script>
+    var btn = document.querySelector('button');
+    var input = document.querySelector('input');
+
+    // 核心算法:声明一个flag变量,进行条件判断,如果flag=0;显示密码,不等于0,隐藏密码.
+    // 但是flag是默认不变的,咱们需要在执行完显示\隐藏之后,改变flag的值
+    var flag = 0;
+    btn.onclick = function () {
+        if (flag == 0) {
+            input.type = "text";
+            flag = 1; //方法一:修改为1 ,可以进行隐藏了
+            // flag++; //方法二
+        } else {
+            input.type = "password";
+            flag = 0; //方法一:修改为0 ,可以进行显示了
+            // flag--; //方法二
+        }
+    }
+</script>
+
+</html>

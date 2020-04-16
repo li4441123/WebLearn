@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>阻止默认行为</title>
+</head>
+
+<body>
+<a href="http://www.baidu.com">百度</a>
+</body>
+<script>
+    var a = document.querySelector('a');
+    // 1. 监听注册方式,阻止默认行为, 让链接不跳转或者提交按钮不提交
+    a.addEventListener('click', function (e) {
+        console.log(e.type); //click
+        e.preventDefault(); //阻止默认行为,DOM标准写法
+    })
+
+    // 2.传统注册方式,阻止默认行为
+    a.onclick = function (e) {
+        e.returnValue; // 适用于IE678
+        return false; // 兼容性写法都适合, 但是有个特点就是之后的代码都不会被执行
+    }
+</script>
+
+</html>

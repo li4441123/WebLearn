@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery隐氏迭代</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<body>
+<div>隐氏迭代</div>
+<div>隐氏迭代</div>
+<div>隐氏迭代</div>
+<div>隐氏迭代</div>
+<div>隐氏迭代</div>
+
+<ul>
+    <li>也是隐氏迭代</li>
+    <li>也是隐氏迭代</li>
+    <li>也是隐氏迭代</li>
+    <li>也是隐氏迭代</li>
+</ul>
+</body>
+<script>
+    // 隐氏迭代（ 重点）：遍历内部DOM元素的过程。
+    // 简单理解： 给匹配到的所有元素进行遍历循环， 执行相应的方法， 而不用我们再进行循环， 简化了我们的操作。
+    $(function () {
+        $('div').css('background', 'pink'); //因为隐氏迭代的效果，省去了我们循环的这步操作
+        $('ul li').css('color', 'green');
+    })
+</script>
+
+</html>

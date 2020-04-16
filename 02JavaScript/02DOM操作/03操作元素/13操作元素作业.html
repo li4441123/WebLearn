@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>操作元素作业</title>
+</head>
+<style>
+    .gg {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+
+<!-- 1.用户名显示隐藏 -->
+<input style="color: #999;" type="text" value="用户名">
+<!-- 2.点击关闭 -->
+<div class="gg"></div>
+<!-- 3.开关灯 -->
+<button>开\关</button>
+</body>
+<script>
+    // 1.用户名显示隐藏 
+    var input = document.querySelector('input');
+    input.onfocus = function () {
+        if (this.value == '用户名') {
+            this.value = '';
+        }
+        this.style.color = '#333';
+    }
+    input.onblur = function () {
+        if (this.value == '') {
+            this.value = '用户名';
+
+        }
+        this.style.color = '#333';
+    }
+
+    // 2.点击关闭
+    var gg = document.querySelector('.gg');
+    gg.onclick = function () {
+        gg.style.display = 'none';
+    }
+
+    // 3.开关灯
+    var body = document.body;
+    var btn = document.querySelector('button');
+    var flag = 0;
+    btn.onclick = function () {
+        if (flag == 0) {
+            body.style.backgroundColor = '#333';
+            flag++;
+        } else {
+            body.style.backgroundColor = '#fff';
+            flag--;
+
+        }
+    }
+</script>
+
+</html>

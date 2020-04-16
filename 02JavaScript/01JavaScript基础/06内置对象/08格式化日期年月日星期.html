@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>格式化日期年月日星期</title>
+    <script>
+        // 格式化年份
+        var today = new Date();
+        var year = today.getFullYear(); // 2019年
+        console.log(year);
+
+        // 格式化月份,记得月份+1
+        var month = today.getMonth() + 1; // 10月份  从零开始的,不是从1开始的. 要比实际小1个月,我们要在其基础上 +1
+        console.log(month);
+
+        //格式化日期
+        console.log(today.getDate()); //31号
+
+        //周几/星期几
+        console.log(today.getDay()); //周四,周日返回的是0
+
+
+        // 案例: 今天是:2019年10月31日,星期四啊
+        var D = new Date();
+        var year = D.getFullYear();
+        var month = D.getMonth() + 1;
+        var date = D.getDate();
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        var day = D.getDay();
+        console.log('今天是:' + year + '年' + month + '月' + date + '日, ' + arr[day]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

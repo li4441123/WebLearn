@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>navigator对象</title>
+</head>
+
+<body>
+<button>后退</button>
+</body>
+<script>
+    // navigator对象包含有关浏览器的信息， 它有很多属性， 我们最常用的是userAgent， 
+    //该属性可以返回由客户机发送服务器的user - agent头部的值。下面前端代码可以判断用户那个终端打开页面， 实现跳转
+
+    // -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+    var btn = document.querySelector('button');
+    // 1.此功能同浏览器前进后退一样
+    btn.addEventListener('click', function () {
+        history.back(); //前进
+    })
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>立即执行函数</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1.立即执行函数写法: 1、(function(){})()  2、(function(){}())
+    // 主要作用:创建一个独立的作用域,避免了命名冲突
+
+    // 第一种写法 : 可以进行传参
+    (function (a) {
+        console.log(a);
+
+    })(1);
+
+    // 第二种写法:可以进行传参
+    (function (a) {
+        console.log(a);
+    }(2))
+</script>
+
+</html>

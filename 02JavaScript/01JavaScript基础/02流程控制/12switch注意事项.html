@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>switch注意事项</title>
+    <script>
+        // switch注意事项
+        var num = 5;
+        switch (num) {
+            case 1:
+                console.log(1);
+
+        }
+        // 1、日常开发，表达式我们经常写成变量
+        // 2、我们num的值和case里面匹配的值，是全等于 === ，必须是值和数据类型全部相同才可以
+        // 3、 如果当前case里没有break， 并不会退出switch， 则会继续执行下一个case， 知道遇见有break的case， 当然这种是错误的， 每个case里必须有break。
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

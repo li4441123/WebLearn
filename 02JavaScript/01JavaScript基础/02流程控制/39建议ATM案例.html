@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>建议ATM案例</title>
+    <script>
+        var ye = 100;
+        while (op != '4') {
+            var op = parseInt(prompt('请输入您要进行的操作：\n1.存钱\n2.取钱\n3.查询余额\n4.退出系统'));
+            switch (op) {
+                case 1:
+                    var cun = parseInt(prompt('请输入你要存得金额：'));
+                    ye += cun;
+                    alert('当前金额' + ye + '元')
+                    break;
+                case 2:
+                    var qu = parseInt(prompt('请输入你要取得金额：'));
+                    ye -= qu;
+                    alert('当前金额' + ye + '元')
+                    break;
+                case 3:
+                    alert('当前金额' + ye + '元')
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

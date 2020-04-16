@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>location对象的方法</title>
+</head>
+
+<body>
+<button>Souga</button>
+</body>
+<script>
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function () {
+        // 1. 跟href一样， 可以跳转页面（ 也称为重定向页面）
+        // location.assign('http://www.baidu.com');
+
+        // 2. 替换当前页面， 因为不记录历史， 所以不能后退页面
+        // location.replace('http://www.baidu.com');
+
+        // 3.重新加载页面，相当于刷新按钮或者f5如果参数为true 强制刷新ctrl+f5
+        // location.reload();
+    })
+</script>
+
+</html>

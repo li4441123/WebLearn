@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>利用函数求任意两个数最大的值</title>
+    <script>
+        function getMax(num1, num2) {
+            if (num1 > num2) {
+                return num1;
+            } else {
+                return num2;
+            }
+        }
+
+        console.log(getMax(7854574, 4548754547));
+
+        // 1、第一种方式：if....esle 判断
+
+
+        function getMax(num1, num2) {
+            return num1 > num2 ? num1 : num2;
+        }
+
+        console.log(getMax(785432333574, 4548754547));
+        // 2、 第二种方式： 三元运算符， 更加简单
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>节点操作之父节点</title>
+</head>
+
+<body>
+<div class="box">
+    <div class="erweima"></div>
+</div>
+</body>
+<script>
+    //1.传统获取元素方法
+    var erweima = document.querySelector('.erweima');
+
+    //2.获取erweima的父级节点元素，erweima.parentNode , 获取最近的父级元素（亲爸爸），如果找不到父节点，则返回null
+    var box = erweima.parentNode; //更简单
+    console.log(box);
+</script>
+
+</html>

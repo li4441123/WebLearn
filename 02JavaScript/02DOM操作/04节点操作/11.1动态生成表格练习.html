@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>动态生成表格练习</title>
+</head>
+<style>
+    table {
+        width: 500px;
+        margin-top: 200px;
+    }
+
+    thead > tr {
+        background-color: #888;
+    }
+
+    tr {
+        text-align: center;
+    }
+
+    td {
+        border: 1px solid #777;
+        border-top: 0;
+    }
+</style>
+
+<body>
+<table align="center" cellpadding="0" cellspacing="0">
+    <thead>
+    <tr>
+        <td>姓名</td>
+        <td>学科</td>
+        <td>分数</td>
+        <td>操作</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    </tbody>
+</table>
+
+</body>
+<script>
+    var data = [{
+        name: '张三',
+        sou: 'java',
+        fs: 99
+    }, {
+        name: '李四',
+        sou: 'java',
+        fs: 95
+    }, {
+        name: '王五',
+        sou: 'java',
+        fs: 89
+    }, {
+        name: '王五',
+        sou: 'java',
+        fs: 89
+    }]
+
+    //1.获取tbody元素
+    var tbody = document.querySelector('tbody');
+    // 2.通过循环data的长度，得到条数来创建tr
+    for (var i = 0; i < data.length; i++) {
+        var tr = document.createElement('tr');
+        tbody.appendChild(tr);
+        // 3.通过循环data下的每一个对象，获取每一行需要添加的td数量
+        for (var k in data[i]) {
+            var td = document.createElement('td');
+            // 3.1. 赋值把对象元素添加给td
+            td.innerHTML = data[i][k];
+            tr.appendChild(td);
+        }
+        // 4.再每一行最后面创建并追加一个td删除元素，每次循环都会再最后一行添加
+        var td = document.createElement('td');
+        td.innerHTML = '<a href="javascript:;">删除</a>'
+        tr.appendChild(td);
+    }
+
+    // 5.获取所有的a标签元素
+    var a = document.querySelectorAll('a');
+    // 5.1. 并循环所有a标签，给其添加点击事件
+    for (var i = 0; i < a.length; i++) {
+        // 5.2.每次点击a元素，删除当前tr行数
+        a[i].onclick = function () {
+            tbody.removeChild(this.parentNode.parentNode);
+        }
+    }
+</script>
+
+</html>

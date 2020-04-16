@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>学生成绩案例</title>
+    <script>
+        var bout = prompt('请输入有多少学生：')
+        var sum = 0;
+        var pj = 0;
+        for (var i = 1; i <= bout; i++) {
+            var res = prompt('第' + i + '个学生成绩：');
+            // 因为从prompt取过来的数据类型是字符串，我们要把他转换成数字类型，不然输出结果错误。
+            sum = sum + parseFloat(res);
+        }
+        pj = sum / bout;
+        alert('班级总分数为：' + sum);
+        alert('班级平均分数为：' + pj);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

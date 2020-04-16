@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>猜数字游戏</title>
+    <script>
+        // 随机取整数的函数，包含最小数和最大数
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+
+
+        // 猜数字游戏
+        var getint = getRandomInt(1, 50); //务必放在循环外
+        while (true) { //死循环
+            var Input = prompt('请输入1-10之间的整数：');
+            if (Input > getint) {
+                alert('你猜大了');
+            } else if (Input < getint) {
+                alert('你猜小了');
+            } else {
+                alert('你猜对了');
+                break; // 条件达成，退出循环。不退就死循环了
+            }
+        }
+
+
+        // 猜数字游戏，1-50之间的一个随机整数，10次机会
+        var getint = getRandomInt(1, 50); //务必放在循环外
+        i = 1;
+        while (i <= 10) {
+            var Input = prompt('请输入1-10之间的整数：');
+            if (Input > getint) {
+                alert('你猜大了');
+            } else if (Input < getint) {
+                alert('你猜小了');
+            } else {
+                alert('你猜对了');
+            }
+            i++;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

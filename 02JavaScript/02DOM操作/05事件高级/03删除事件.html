@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>删除事件</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        background-color: pink;
+        margin: 15px;
+        text-align: center;
+    }
+</style>
+
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</body>
+<script>
+    var div = document.querySelectorAll('div');
+    // 1.传统注册事件,移除事件方式
+    div[0].onclick = function () {
+        alert(111);
+        // 删除事件
+        div[0].onclick = null;
+    }
+
+    // 2.监听注册事件,移除事件方式
+    div[1].addEventListener('click', fn);
+
+    function fn() {
+        alert(222);
+        // 删除事件
+        div[1].removeEventListener('click', fn);
+    }
+</script>
+
+</html>

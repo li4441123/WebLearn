@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>tab栏切换布局分析</title>
+</head>
+<style>
+    li {
+        list-style: none;
+        float: left;
+        width: 100px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: #eff0ef;
+    }
+
+    .clearfix:after {
+        /*伪元素是行内元素 正常浏览器清除浮动方法*/
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        *zoom: 1;
+        /*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+    }
+
+    .bg {
+        background-color: red;
+        color: #fff;
+    }
+
+    .tbd {
+        width: 100px;
+        text-align: center;
+        margin: 10px 25px;
+    }
+
+    .item {
+        display: none;
+    }
+</style>
+
+<body>
+<div class="table clearfix">
+    <ul>
+        <li class="bg">首页</li>
+        <li>监控</li>
+        <li>我的</li>
+    </ul>
+</div>
+
+<div class="tbd">
+    <div class="item" style="display: block;">我是首页</div>
+    <div class="item">我是监控</div>
+    <div class="item">我是我的</div>
+</div>
+</body>
+<script>
+    // 1.获取元素
+    var lis = document.querySelector('.table').querySelectorAll('li');
+    var items = document.querySelector('.tbd').querySelectorAll('.item');
+    // 2.for循环为每个小li绑定点击事件
+    for (var i = 0; i < lis.length; i++) {
+        // 5. 为小li设置自定义属性名index
+        var index = lis[i].setAttribute('index', i);
+        lis[i].onclick = function () {
+            //3.排他思想，变换类名前，先清除类名
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].className = '';
+            }
+            // 4.点击li标签，li标签添加bg类
+            this.className = 'bg';
+            // 6.获取当前index的值
+            var index = this.getAttribute('index');
+            // 7.排他思想：每次点击，先让所有item不显示
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.display = 'none';
+            }
+            // 8.显示点击的item
+            items[index].style.display = 'block';
+        }
+    }
+</script>
+
+</html>

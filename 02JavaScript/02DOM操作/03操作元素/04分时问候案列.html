@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>分时问候案列</title>
+</head>
+
+<body>
+<div>早上好</div>
+<img alt="" src="https://s2.ax1x.com/2019/11/07/MFQLgs.jpg">
+</body>
+<script>
+    var div = document.querySelector('div');
+    var img = document.querySelector('img');
+
+    var date = new Date;
+    var h = date.getHours();
+    // console.log(h);
+
+    if (h < 12) {
+        div.innerHTML = '上午好';
+        img.src = "https://s2.ax1x.com/2019/11/07/MFlVDx.jpg";
+    } else if (h > 12) {
+        div.innerHTML = '下午好';
+        img.src = "https://s2.ax1x.com/2019/11/07/MF3A76.jpg";
+    } else if (h > 18) {
+        div.innerHTML = '晚上好';
+        img.src = "https://s2.ax1x.com/2019/11/07/MF3lnI.jpg";
+    }
+</script>
+
+</html>

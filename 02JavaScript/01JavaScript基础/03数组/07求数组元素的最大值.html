@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>求数组元素的最大值</title>
+    <script>
+        //求数组[2，6，1，77，52，25，7]中的最大值
+        //声明一个保存最大元素的变量max。//默认最大值可以取数组中的第一个元素。
+        //遍历这个数组，把里面每个数组元素和max相比较。
+        //如果这个数组元素大于max就把这个数组元素存到max里面，否则继续下一轮比较。
+        //最后输出这个max
+        var arr = [15, 18, 25, 85, 96, 1554, 9999999, 15, 158, 1221]
+        var max = arr[0];
+        for (var i = 1; i <= arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        console.log(max);
+
+        // 1、求数组中元素的最大值
+
+        var arr2 = [14, 20, 54, 89, 2, 45, 12, 1]
+        var min = arr[0];
+        for (var i = 1; i < arr2.length; i++) {
+            if (arr2[i] < min) {
+                min = arr2[i];
+            }
+        }
+        console.log(min);
+        // 2、求数组中元素的最小值
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

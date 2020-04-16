@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>获得鼠标在页面中的坐标</title>
+</head>
+
+<body style="height: 3000px;">
+
+</body>
+<script>
+    document.addEventListener('click', function (e) {
+        // 1.当前页面'可视区域'的X轴Y轴的位置
+        console.log(e.clientX);
+        console.log(e.clientY);
+        console.log('------------------------------------------');
+
+    })
+
+    // 2. 当前页面的X轴Y轴的位置
+    document.addEventListener('click', function (e) {
+        console.log(e.pageX);
+        console.log(e.pageY);
+        console.log('------------------------------------------');
+
+    })
+
+    document.addEventListener('click', function (e) {
+        // 3. 当前电脑屏幕的X轴Y轴的位置
+        console.log(e.screenX);
+        console.log(e.screenY);
+        console.log('------------------------------------------');
+    })
+</script>
+
+</html>

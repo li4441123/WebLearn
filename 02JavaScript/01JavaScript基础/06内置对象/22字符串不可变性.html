@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>字符串不可变性</title>
+    <script>
+        // 指的是里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中新开辟了一个内存空间。原来的值还是有的
+        // 因为字符串的不可变,不要大量的给字符串重新赋值,或者拼接
+
+        var str = '';
+        for (var i = 0; i <= 100000000; i++) {
+            str = str + i;
+        }
+        console.log(str);
+
+        // 大量拼接字符串,会开辟很多内存空间,耗费内存资源,造成应用卡顿
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

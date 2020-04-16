@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>数组中新增元素</title>
+    <script>
+        var arr = [1, 2, 3, 4];
+        console.log(arr.length);
+        arr.length = 6; // 修改arr长度为6，里面有6个元素
+        console.log(arr); // empty × 2
+        console.log(arr[4]); // undefined，因为没有给值，所以是undefined
+        console.log(arr[5]); // undefined, 因为没有给值，所以是undefined
+        // 1、可以通过修改length长度，来实现扩容的目的（length可读写）
+
+
+        var arr2 = ['red', 'blue', 'pink']
+        arr2[3] = 'black'; //追加的元素
+        console.log(arr2); // 打印数组，查看上述追加，已成功添加进去。
+
+        arr2[4] = 'green'; //追加的元素
+        console.log(arr2); // 打印数组，查看上述追加，已成功添加进去。
+
+        arr2[0] = '替换掉啦'; //如果没有是追加，有的话是替换，这里是替换
+        console.log(arr2); //成功被替换了
+
+        arr2 = '没了';
+        console.log(arr2); //不要给数组名赋值，不然元素就会丢失。它本身就是个变量，重新赋值，内容就会改变。
+
+        // 2、修改索引号，直接追加数组元素（常用）
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

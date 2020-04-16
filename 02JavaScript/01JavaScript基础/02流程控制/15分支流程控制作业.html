@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>switch作业</title>
+    <script>
+        var time = prompt('请输入您要查询的时间：');
+        switch (time) {
+            case '12':
+                alert('中午好');
+                break;
+            case '18':
+                alert('傍晚好');
+                break;
+            case '23':
+                alert('深夜好');
+                break;
+            default:
+                alert('早些休息！');
+        }
+        // 1、判断时间段
+
+
+        var num1 = prompt('请输入数字：');
+        var num2 = prompt('请再次输入数字：');
+        if (num1 > num2) {
+            alert(num1);
+        } else {
+            alert(num2);
+        }
+        //2、比较两个数的最大值
+
+
+        var jiou = prompt('你来输个数字：');
+        if (jiou % 2 == 0) {
+            alert('偶数');
+        } else {
+            alert('奇数');
+        }
+        //3、判断奇偶数
+
+        var week = prompt('今天周几：');
+        switch (week) {
+            case '1':
+                alert('今天是周一吖');
+                break;
+            case '2':
+                alert('今天是周二吖');
+                break;
+            case '3':
+                alert('今天是周三吖');
+                break;
+            case '4':
+                alert('今天是周四吖');
+                break;
+            case '5':
+                alert('今天是周五吖');
+                break;
+            case '6':
+                alert('今天是周六吖');
+                break;
+            case '7':
+                alert('今天是周日吖');
+                break;
+            default:
+                alert('你糊涂了吖');
+        }
+        // 4、根据输入的值，返回星期几
+
+        var mony = prompt('班长你有多少钱:');
+        if (mony >= 2000) {
+            alert('那你请大家吃西餐吖');
+        } else if (mony >= 1500) {
+            alert('那你请大家吃快餐吖');
+        } else if (mony >= 1000) {
+            alert('那你请大家喝饮料吖');
+        } else if (mony >= 500) {
+            alert('那你请大家吃棒棒糖吖');
+        } else {
+            alert('穷鬼，下次把钱带够');
+        }
+        // 5、班长请客案例
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery的顶级对象$</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<script>
+    // 1. $是JQuery的别称，
+    // 2.$同时也是JQuery的顶级对象
+    // 第一种方法，但是一般为了方便，通常使用$, 推荐
+    $(function () {
+        alert('$是JQuery的别称');
+    })
+
+    // 第二种方法
+    jQuery(function () {
+        alert('两者的作用相同');
+    })
+</script>
+
+<body>
+
+</body>
+
+</html>

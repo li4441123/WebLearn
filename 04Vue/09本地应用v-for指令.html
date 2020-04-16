@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>本地应用v-for指令</title>
+</head>
+
+<body>
+<div id="app">
+    <button @click="add">添加</button>
+    <button @click="del">删除</button>
+    <ul>
+        <li :title="item" v-for="item in arr">
+            {{item}}
+        </li>
+    </ul>
+    <h2 :title="msg.name" v-for="(msg,index) in ly">
+        {{index+1}}、 {{msg.name}} {{msg.age}}
+    </h2>
+</div>
+</body>
+<script src="./res/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            arr: ['天', '地', '君', '亲', '师'],
+            ly: [{
+                'name': '宋华山',
+                'age': 18
+            }, {
+                'name': '田敏',
+                'age': 16
+            }]
+        },
+        methods: {
+            add: function () {
+                this.ly.push({
+                    'name': '宋柒柒',
+                    'age': 0
+                })
+            },
+            del: function () {
+                this.ly.shift();
+            }
+        },
+    })
+</script>
+
+</html>

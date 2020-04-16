@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>网络应用axios</title>
+</head>
+
+<body>
+<div id="app">
+    <button @click="get">get获取</button>
+    <p v-for="item in pvalue">{{item}}</p>
+</div>
+</body>
+<script src="./res/vue.js"></script>
+<script src="./res/axios.min.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            // pvalue: '',
+            pvalue: [],
+        },
+        methods: {
+            get: function () {
+                var that = this; //this指向在axios回调函数中会变，提前声明变量that把this存在里面
+                axios.get('https://autumnfish.cn/api/joke').then(function (ret) {
+                    console.log(ret.data);
+                    // that.pvalue = ret.data;
+                    that.pvalue.push(ret.data);
+                }, function (err) {
+
+                })
+            }
+        }
+
+    })
+</script>
+
+</html>

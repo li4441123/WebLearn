@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>淘宝服饰精品案例</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 5px;
+        border-bottom: 1px solid pink;
+        border-right: 1px solid pink;
+    }
+
+    .warp {
+        width: 300px;
+        height: 300px;
+        border: 1px solid pink;
+        display: flex;
+        margin: 100px auto;
+    }
+
+    .left {
+        width: 30%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right div {
+        display: none;
+    }
+
+    .right img {
+        width: 100%;
+    }
+</style>
+
+<body>
+<div class="warp">
+    <ul class="left">
+        <li>大衣</li>
+        <li>连衣裙</li>
+        <li>休闲裤</li>
+        <li>牛仔裤</li>
+    </ul>
+
+    <div class="right">
+        <div>
+            <img alt="" src="https://aecpm.alicdn.com/simba/img/TB1XotJXQfb_uJkSnhJSuvdDVXa.jpg">
+        </div>
+
+        <div>
+            <img alt="" src="https://img.alicdn.com/tfs/TB1Bu9RwXT7gK0jSZFpXXaTkpXa-520-280.jpg">
+        </div>
+
+        <div>
+            <img alt="" src="https://aecpm.alicdn.com/simba/img/TB1JNHwKFXXXXafXVXXSutbFXXX.jpg">
+        </div>
+
+        <div>
+            <img alt="" src="https://aecpm.alicdn.com/simba/img/TB1XotJXQfb_uJkSnhJSuvdDVXa.jpg">
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    // 1.给左侧li绑定鼠标经过事件
+    $('.left li').mousemove(function () {
+        // 2.鼠标经过颜色变成红色
+        $(this).css('background', 'red');
+        // 3.排他思想：鼠标经过当前元素，其它元素样式清空
+        $(this).siblings('li').css('background', '');
+        // 4.获取当前元素序列号
+        var index = $(this).index();
+
+        // 5.进行展示隐藏图片的操作
+        $('.right div').eq(index).show();
+        $('.right div').eq(index).siblings().hide();
+    });
+</script>
+
+</html>

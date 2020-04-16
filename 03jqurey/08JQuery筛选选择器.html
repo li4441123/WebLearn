@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JQuery筛选选择器</title>
+    <script src="./res/jquery.min.js"></script>
+</head>
+
+<body>
+<ul>
+    <li>山东济南</li>
+    <li>山东济南</li>
+    <li>山东济南</li>
+    <li>山东济南</li>
+    <li>山东济南</li>
+    <li>山东济南</li>
+</ul>
+
+<ol>
+    <li>中国青岛</li>
+    <li>中国青岛</li>
+    <li>中国青岛</li>
+    <li>中国青岛</li>
+    <li>中国青岛</li>
+    <li>中国青岛</li>
+</ol>
+</body>
+<script>
+    $(function () {
+        // 1.首行选择
+        $('ul li:first').css('color', 'pink');
+        // 2.末行选择
+        $('ul li:last').css('color', 'blue');
+        // 3.索引号eq(...)选择
+        $('ul li:eq(3)').css('color', 'red');
+
+        // 4.奇数行选择
+        $('ol li:odd').css('color', 'yellow');
+
+        // 4.偶数行选择
+        $('ol li:even').css('color', 'green');
+
+    })
+</script>
+
+</html>

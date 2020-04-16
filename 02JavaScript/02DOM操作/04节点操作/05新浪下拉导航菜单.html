@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width= , initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>新浪下拉导航菜单</title>
+</head>
+<style>
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .nav {
+        margin: 100px auto;
+        background-color: #fff;
+    }
+
+    .nav > li {
+        width: 180px;
+        height: 55px;
+        line-height: 55px;
+        float: left;
+        text-align: center;
+    }
+
+    .nav > li > a:hover {
+        background-color: #777;
+        color: aliceblue;
+    }
+
+    .clearfix:after {
+        /*伪元素是行内元素 正常浏览器清除浮动方法*/
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .clearfix {
+        *zoom: 1;
+        /*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+    }
+
+    .nav-1 > li {
+        border: 1px solid #666;
+        width: 100px;
+        height: 55px;
+    }
+
+    .nav-1 > li:hover {
+        background-color: red;
+    }
+</style>
+
+<body>
+<ul class="nav clearfix">
+    <li>
+        <a href="#">首页</a>
+        <ul class="nav-1">
+            <li><a href="#">微博</a></li>
+            <li><a href="#">微博</a></li>
+            <li><a href="#">微博</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#">首页</a>
+        <ul class="nav-1">
+            <li><a href="#">微博</a></li>
+            <li><a href="#">微博</a></li>
+            <li><a href="#">微博</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a href="#">首页</a>
+        <ul class="nav-1">
+            <li><a href="#">微博</a></li>
+            <li><a href="#">微博</a></li>
+            <li><a href="#">微博</a></li>
+        </ul>
+    </li>
+
+</ul>
+</body>
+<script>
+    var nav = document.querySelector('.nav');
+    var lis = nav.children;
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].onmouseover = function () {
+            this.children[1].style.display = 'block';
+        }
+
+        lis[i].onmouseout = function () {
+            this.children[1].style.display = 'none';
+        }
+    }
+</script>
+
+</html>

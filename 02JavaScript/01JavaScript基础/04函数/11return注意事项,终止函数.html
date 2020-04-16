@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>return注意事项,终止函数</title>
+    <script>
+        function zhuyi(num1, num2) {
+            return num1 + num2;
+            alert('不会被弹出,return以下的代码不会执行,函数再次终止并完成');
+        }
+
+        console.log(zhuyi(1, 2));
+
+        // 1、return有终止函数的功能
+
+        function fn(n1, n2) {
+            return n1, n2;
+        }
+
+        console.log(fn(1, 4)); //4
+        // 2、return只能返回一个值，以最后一个为准，逗号为分隔符
+
+        function gerFour(s1, s2) {
+            return [s1 + s2, s1 - s2, s1 * s2, s1 / s2] // 如果要返回多个值，可以存到数组里
+        }
+
+        var res = gerFour(8, 4);
+        console.log(res);
+        //3、输出数组，如果使用单个值，可遍历出来
+        var str = '';
+        for (var i = 0; i < res.length; i++) {
+            str += res[i] + '\n';
+        }
+        console.log(str);
+        //4、遍历出数组
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>简单数据类型boolean以及undefined和null</title>
+    <script>
+        console.log(true + false);
+        // boolean布尔型：true（1）和 false（0）
+
+
+        var undefined; // 未定义数据类型
+        console.log(undefined);
+        // 如果声明一个变量未赋值， 就是undefined 未定义数据类型
+        console.log(undefined + '字符串');
+        // 任何数据类型和字符串相加都是字符串
+        console.log(undefined + 1);
+        // NaN、undefined 和数字相加，最后的结果是NaN
+
+
+        var kong = null; // 空
+        console.log(kong + '字符串');
+        // null字符串
+        console.log(kong + 1);
+        // null和 1 相加为1
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
