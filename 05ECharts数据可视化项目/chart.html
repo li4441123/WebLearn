@@ -3,45 +3,85 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>chart体验</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/api.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/chart.css">
+    <script src="./js/flexible.js"></script>
+    <title>自适应高度</title>
 </head>
-<style>
-    #box {
-        width: 400px;
-        height: 300px;
-        background-color: pink;
-    }
-</style>
 
 <body>
-<div id="box"></div>
-</body>
-<script src="./js/echarts.min.js"></script>
-<script>
-    var myChart = echarts.init(document.getElementById('box'));
-    // 指定图表的配置项和数据
-    var option = {
-        title: {
-            text: 'ECharts 入门示例'
-        },
-        tooltip: {},
-        legend: {
-            data: ['销量']
-        },
-        xAxis: {
-            data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-        },
-        yAxis: {},
-        series: [{
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
-        }]
-    };
 
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
+    <div class="container">
+        <header>
+            <h1>可视化面板</h1>
+            <div class="showTime"></div>
+        </header>
+
+        <content>
+            <div class="panel bar">
+                <div class="chart">
+                    <!-- 表格内容 -->
+                    <table class="table" border="1" align="center">
+                        <thead valign="middle">
+                            <tr>
+                                <th>序号</th>
+                                <th>终端机</th>
+                                <th>工号</th>
+                                <th>登录时间</th>
+                                <th>当前客户</th>
+                                <th>当前工单</th>
+                                <th>状态</th>
+                                <th>数量</th>
+                                <th>进度</th>
+                                <th>用时（分）</th>
+                                <th>报警</th>
+                            </tr>
+                        </thead>
+                        <tbody align="center">
+                            <tr>
+                                <td>01</td>
+                                <td>我是终端机</td>
+                                <td>宋华山</td>
+                                <td>2020-04-21 00:00</td>
+                                <td>大连万达集团</td>
+                                <td>项目拆迁</td>
+                                <td>进行中</td>
+                                <td>15</td>
+                                <td>5</td>
+                                <td>155</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </content>
+
+    </div>
+
+</body>
+
+<script src="./js/api.js"></script>
+<script>
+    // 格式： 当前时间：2020年3月17-0时54分14秒
+    var t = null;
+    t = setTimeout(time, 1000); //開始运行
+    function time() {
+        clearTimeout(t); //清除定时器
+        dt = new Date();
+        var y = dt.getFullYear();
+        var mt = dt.getMonth() + 1;
+        var day = dt.getDate();
+        var h = dt.getHours(); //获取时
+        var m = dt.getMinutes(); //获取分
+        var s = dt.getSeconds(); //获取秒
+        document.querySelector(".showTime").innerHTML = '当前时间：' + y + "年" + mt + "月" + day + "日" + h + "时" + m + "分" + s + "秒";
+        t = setTimeout(time, 1000); //设定定时器，循环运行     
+    }
 </script>
 
 </html>

@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  line-height: 1.15;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container header {
+  position: relative;
+  height: 1.25rem;
+  background: url(../images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.container header h1 {
+  text-align: center;
+  color: #fff;
+  line-height: 1rem;
+}
+.container header .showTime {
+  position: absolute;
+  top: 0;
+  right: 0.375rem;
+  line-height: 0.9375rem;
+  color: #ffffff;
+  font-size: 0.3rem;
+}
+.container content {
+  position: relative;
+  background: url(../images/bg.jpg) no-repeat;
+  flex: 1;
+}
+.container content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 4px solid #02a6b5;
+  border-top: 4px solid #02a6b5;
+}
+.container content::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 4px solid #02a6b5;
+  border-top: 4px solid #02a6b5;
+}
+.container .panel-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.container .panel-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 4px solid #02a6b5;
+  border-left: 4px solid #02a6b5;
+}
+.container .panel-footer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 4px solid #02a6b5;
+  border-right: 4px solid #02a6b5;
+}
+.table {
+  width: 100%;
+}
+.table thead {
+  height: 150px;
+  color: #fff;
+  background-color: #0e4ae0;
+}
+.table tbody {
+  color: #fff;
+  background-color: #009933;
+}
