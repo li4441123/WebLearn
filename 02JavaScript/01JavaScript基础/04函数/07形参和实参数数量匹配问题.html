@@ -16,13 +16,36 @@
         getSum(1, 4, 3);
         // 2.如果实参的个数多于形参的个数会取到形参的个数
         getsum(1) //NaN
-        //  3.如果实参的个数小于形参的个数多于的形参定义为undefined最终的结果就是NaN;形参可以看做是不用声明的变量num2是一个变量但是没有接受值结果就是undefined
-        //  建议我们尽量让实参的个数和形参相匹配
+            //  3.如果实参的个数小于形参的个数多于的形参定义为undefined最终的结果就是NaN;形参可以看做是不用声明的变量num2是一个变量但是没有接受值结果就是undefined
+            //  建议我们尽量让实参的个数和形参相匹配
     </script>
 </head>
 
 <body>
-
+    <button id="generatelmage">打印</button>
+    <div id="ert">
+        <h1>hello</h1>
+        <h2>world</h2>
+    </div>
 </body>
+<script>
+    window.onload = function() {
+        var bt = document.getElementById("generatelmage")
+        var div_print = document.getElementById("ert"); //i 
+        bt.onclick = function() {
+            printdiv(ert);
+        }
+    }
+
+
+    function printdiv(printpage) {
+        var newstr = printpage.innerHTML;
+        var oldstr = document.body.innerHTML;
+        document.body.innerHTML = newstr;
+        window.print();
+        document.body.innerHTML = oldstr;
+        return location.reload();
+    }
+</script>
 
 </html>

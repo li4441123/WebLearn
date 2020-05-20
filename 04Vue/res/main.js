@@ -5,17 +5,17 @@ var app = new Vue({
         wlist: []
     },
     methods: {
-        enselect: function () {
+        enselect: function() {
             var that = this;
             axios.get('https://tianqiapi.com/api', {
-                params: {
-                    appid: '73681123',
-                    appsecret: 'eIC9iuAy',
-                    version: 'v1',
-                    city: this.city,
-                    vue: '1'
-                }
-            })
+                    params: {
+                        appid: '73681123',
+                        appsecret: 'eIC9iuAy',
+                        version: 'v1',
+                        city: this.city,
+                        vue: '1'
+                    }
+                })
                 .then(res => {
                     console.log(res);
                     console.log(res.data.data);
@@ -24,7 +24,7 @@ var app = new Vue({
                 })
         },
 
-        change: function (city) {
+        change: function(city) {
             this.city = city;
             this.enselect();
         }

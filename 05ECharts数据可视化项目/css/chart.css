@@ -33,6 +33,7 @@ body {
 .container content {
   position: relative;
   background: url(../images/bg.jpg) no-repeat;
+  background-size: 100% 100%;
   flex: 1;
 }
 .container content::before {
@@ -40,8 +41,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-left: 4px solid #02a6b5;
   border-top: 4px solid #02a6b5;
 }
@@ -50,8 +51,8 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-right: 4px solid #02a6b5;
   border-top: 4px solid #02a6b5;
 }
@@ -66,8 +67,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-bottom: 4px solid #02a6b5;
   border-left: 4px solid #02a6b5;
 }
@@ -76,20 +77,42 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-bottom: 4px solid #02a6b5;
   border-right: 4px solid #02a6b5;
 }
 .table {
-  width: 100%;
+  width: 95%;
 }
 .table thead {
-  height: 150px;
-  color: #fff;
+  height: 1.875rem;
+  font-size: 0.3rem;
+  color: #00fcff;
   background-color: #0e4ae0;
 }
+.table thead tr {
+  height: 0.725rem;
+}
 .table tbody {
+  font-size: 0.25rem;
+  font-weight: 600;
   color: #fff;
   background-color: #009933;
+}
+.table tbody tr {
+  height: 0.7rem;
+}
+.table tbody .alarm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border: 0;
+}
+.table tbody .alarm button {
+  width: 0.45rem;
+  height: 0.45rem;
+  background-color: red;
+  border-radius: 70%;
 }
