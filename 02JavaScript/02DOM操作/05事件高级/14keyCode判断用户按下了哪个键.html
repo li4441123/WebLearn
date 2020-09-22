@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>keyCode判断用户按下了哪个键</title>
-</head>
+  </head>
 
-<body>
-
-</body>
-<script>
+  <body></body>
+  <script>
     // 1.keydown 和 keyup 不区分大小写 , keypress区分大小写,但是不支持功能键
     // 2.通过键盘事件对象中的 'keyCode' 我们可以获得ASCII码值,通过ASCII码值可以进行一系列操作
-    document.addEventListener('keydown', function (e) {
-        console.log(e.keyCode);
-        if (e.keyCode == 65) {
-            alert('a弹起了');
-        } else {
-            alert('请输入a');
-        }
-    })
+    document.addEventListener("keydown", function (e) {
+      console.log(e.keyCode);
+      if (e.keyCode == 65) {
+        alert("a弹起了");
+      } else {
+        alert("请输入a");
+      }
+    });
 
-    document.addEventListener('keypress', function (e) {
-        console.log(e.keyCode);
-    })
-</script>
-
+    document.addEventListener("keypress", function (e) {
+      console.log(e.keyCode);
+    });
+  </script>
 </html>
