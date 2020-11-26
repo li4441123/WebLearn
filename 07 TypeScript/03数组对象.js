@@ -30,6 +30,6 @@ var bool = arr2.some(function (item) {
     return true;
   } else {
     //返回false，继续循环
-    return false;
+    return false
   }
 });

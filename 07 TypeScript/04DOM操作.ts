@@ -19,6 +19,6 @@ enum Gender {
   a = 3,
   b,
   c = 100,
-  d,
+  d
 }
 console.log(Gender.a);

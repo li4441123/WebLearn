@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./res/vue.js"></script>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    header {
+      width: 100%;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+    .active {
+      background-color: green;
+    }
+  </style>
+  <body>
+    <div id="app">
+      <header @click="bh" :class="{active:isactive}">我是头部</header>
+    </div>
+    <script>
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          isactive: false,
+        },
+        methods: {
+          bh: function () {
+            this.isactive = true
+              ? this.isactive == false
+              : this.isactive == true;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

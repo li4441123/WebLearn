@@ -14,7 +14,7 @@ function startServer() {
   };
   var server = http.createServer(onrequest);
   server.listen(3000, '127.0.0.1');
-  console.log('启动成功');
+       console.log('启动成功');
 }
 
 exports.startServer = startServer;

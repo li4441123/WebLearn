@@ -127,5 +127,6 @@ const { log } = require('console');
 // console.log('Server running at http://127.0.0.1:8081/');
 
 // TODO把server封装成方法，再 调用模块化server服务
-var server = require('./server');
-server.startServer();
+// var server = require('./server');
+// server.startServer();
+
